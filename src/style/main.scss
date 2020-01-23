@@ -36,13 +36,13 @@ p {
 }
 h1,
 .h1 {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: calcFluidSize(32, 64);
-  line-height: calcFluidSize(40, 85);
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 64px;
+  line-height: 85px;
 }
 h2,
 .h2 {
-  font: 28px/40px 'Segoe UI', sans-serif;
+  font: 28px/40px 'Yeseva One', sans-serif;
   margin-bottom: 55px;
   text-align: center;
   @include bp($sm) {
@@ -261,7 +261,7 @@ button {
   flex: 1 0 auto;
 }
 .container-fluid {
-  max-width: 1174px;
+  max-width: 1150px;
 }
 .header {
   position: absolute;
@@ -292,7 +292,7 @@ button {
   color: #272641;
   text-align: center;
   &__title {
-    font: 24px/36px 'Segoe UI', sans-serif;
+    font: 24px/36px 'Yeseva One', sans-serif;
     margin-bottom: 16px;
   }
   &__subtitle {
@@ -624,51 +624,80 @@ button {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
   background-position: bottom left;
-  padding: 0 0 190px 0;
+  padding: 0 0 200px 0;
   position: relative;
   overflow: hidden;
   @include bp($lg) {
     background-position: bottom center;
   }
+  @include bp($xxl) {
+    padding: 0 0 300px 0;
+  }
   &__wrap {
-    max-height: 480px;
-    height: 100vh;
-    padding-top: 80px;
-    @include bp(1280px) {
-      padding-top: 0;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    @include bp($xl) {
+      max-height: 560px;
+    }
+    @include bp($xxl) {
       max-height: 9999px;
+      padding-top: 220px;
+      padding-bottom: 0;
     }
     &:before {
       content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
-      margin-left: -50px;
+      margin-left: 0;
       background: url(../img/preface/1.png) no-repeat;
       background-size: cover;
-      width: 568px;
-      height: 912px;
+      width: 400px;
+      height: 640px;
       display: none;
-      @include bp($lg) {
-        width: calc(100vmin / 1.6055);
-        height: 100vmin;
+      @include bp($sm) {
+        margin-left: 30px;
         display: block;
       }
-      @include bp($lg) {
-        margin-left: 50px;
+      @include bp($xl) {
+        width: 400px;
+        height: 640px;
+      }
+      @include bp($xxl) {
+        width: 568px;
+        height: 912px;
       }
     }
   }
   h1 {
-    margin-bottom: calcFluidSize(15, 32);
     text-align: center;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
     @include bp($sm) {
       text-align: left;
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 25px;
+    }
+    @include bp($xxl) {
+      font-size: 64px;
+      line-height: 85px;
+      margin-bottom: 32px;
     }
     span {
       display: block;
-      padding-top: calcFluidSize(5, 15);
-      font: calcFluidSize(20, 36)/calcFluidSize(26, 42) 'Montserrat', sans-serif;
+      font: 24px/30px 'Montserrat', sans-serif;
+      padding-top: 5px;
+      @include bp($sm) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      @include bp($xxl) {
+        font-size: 36px;
+        line-height: 42px;
+        padding-top: 15px;
+      }
     }
     b {
       white-space: nowrap;
@@ -676,49 +705,98 @@ button {
     }
   }
   &__subtitle {
-    font-size: calcFluidSize(16, 24);
-    line-height: calcFluidSize(22, 32);
     display: flex;
     align-items: center;
     z-index: 1;
     position: relative;
-    margin-bottom: calcFluidSize(22, 48);
     justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
     @include bp($sm) {
-      margin-bottom: 0;
       justify-content: start;
     }
-    @include bp($lg) {
-      margin-bottom: calcFluidSize(22, 48);
+    @include bp($xl) {
+      margin-bottom: 10px;
+    }
+    @include bp($xxl) {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 48px;
     }
     span {
       &:first-of-type {
-        width: calcFluidSize(60, 108);
-        height: calcFluidSize(60, 108);
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         background-color: #ffdd71;
         z-index: -1;
+        @include bp($xxl) {
+          width: 108px;
+          height: 108px;
+        }
       }
       &:last-of-type {
-        margin-left: calcFluidSize(-30, -54);
+        margin-left: -40px;
+        @include bp($xxl) {
+          margin-left: -54px;
+        }
       }
     }
   }
   &__consult {
     text-align: center;
+    @include bp($sm) {
+      display: inline-block;
+      vertical-align: top;
+    }
+    @include bp($xl) {
+      text-align: center;
+      display: block;
+    }
     p {
       color: #59586e;
-      text-shadow: 0 1px #fff;
-      font-size: calcFluidSize(12, 16);
-      line-height: calcFluidSize(18, 19);
-      margin-bottom: calcFluidSize(15, 25);
-      @include bp($lg) {
-        text-shadow: none;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 10px;
+      text-align: center;
+      @include bp($xxl) {
+        margin-bottom: 25px;
       }
       span {
-        max-width: calcFluidSize(200, 250);
+        max-width: 250px;
         display: inline-block;
         vertical-align: top;
+      }
+    }
+  }
+  .btn {
+    &__holder {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 15px 40px;
+      @include bp($xxl) {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 23px 67px;
+      }
+    }
+    &__ico {
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+      @include bp($xxl) {
+        width: 62px;
+        height: 62px;
+        line-height: 62px;
+      }
+      .icon-phone {
+        width: 20px;
+        height: 20px;
+        @include bp($xxl) {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
@@ -736,6 +814,10 @@ button {
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  width: 80px;
+  @include bp($xxl){
+    width: 120px;
+  }
   &.active {
     @include bp($xl){
       visibility: visible;
@@ -781,6 +863,7 @@ button {
     line-height: 18px;
     transform: rotate(-90deg);
     margin-bottom: 60px;
+    white-space: nowrap;
   }
 }
 .postface {
@@ -789,6 +872,10 @@ button {
     padding-left: 10px;
     position: relative;
     z-index: 1;
+    margin: 0 -15px;
+    @include bp($ml) {
+      margin: 0;
+    }
   }
   &__img {
     position: absolute;
@@ -841,9 +928,13 @@ button {
     position: relative;
     z-index: 1;
     height: 100%;
+    margin: 015px;
+    @include bp($ml) {
+      margin: 0;
+    }
   }
   &__content {
-    padding: 80px 40px 85px;
+    padding: 80px 40px 45px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 30px 0 rgba(193, 189, 245, .4);
@@ -852,9 +943,6 @@ button {
     position: relative;
     color: #59586e;
     height: 100%;
-    @include bp($ml) {
-      padding: 80px 40px 45px;
-    }
     &:before {
       content: '';
       position: absolute;
@@ -1054,7 +1142,7 @@ button {
     margin-bottom: 30px;
   }
 }
-.visa-type {
+.visa-direction {
   position: relative;
   padding-bottom: 115px;
   cursor: pointer;
@@ -1159,7 +1247,7 @@ button {
     padding: 0 44px;
   }
   &__name {
-    font: 36px/50px 'Segoe UI', sans-serif;
+    font: 36px/50px 'Yeseva One', sans-serif;
     margin-bottom: 13px;
   }
   &__amount {
@@ -1350,7 +1438,7 @@ button {
       }
     }
     span {
-      font: 28px/38px 'Segoe UI', sans-serif;
+      font: 28px/38px 'Yeseva One', sans-serif;
       text-shadow: 0 1px #6f63d3;
       color: #fff;
       background: #8d88fa;
@@ -1366,8 +1454,13 @@ button {
   }
   .consult-form {
     padding-top: 30px;
+    @include bp($ml) {
+      padding-top: 30px;
+      max-width: 360px;
+      margin: 0 0 0 auto;
+    }
     &__subtitle {
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Yeseva One", sans-serif;
     }
     .btn__text {
       font-size: 16px;
@@ -1391,6 +1484,13 @@ button {
         padding-top: 40px;
         padding-bottom: 20px;
       }
+    }
+  }
+}
+.visa-type {
+  &__title {
+    h2 {
+      max-width: 572px;
     }
   }
 }

@@ -24,24 +24,10 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'Segoe UI';
-  src: url("../fonts/SegoeUI.eot");
-  src: local("Segoe UI"), local("SegoeUI"), url("../fonts/SegoeUI.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI.woff") format("woff"), url("../fonts/SegoeUI.ttf") format("truetype");
+  font-family: 'Yeseva One';
+  src: url("../fonts/YesevaOne-Regular.eot");
+  src: local("Yeseva One Regular"), local("YesevaOne-Regular"), url("../fonts/YesevaOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/YesevaOne-Regular.woff") format("woff"), url("../fonts/YesevaOne-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Segoe UI';
-  src: url("../fonts/SegoeUI-SemiBold.eot");
-  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("../fonts/SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI-SemiBold.woff") format("woff"), url("../fonts/SegoeUI-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Segoe UI';
-  src: url("../fonts/SegoeUI-Bold.eot");
-  src: local("Segoe UI Bold"), local("SegoeUI-Bold"), url("../fonts/SegoeUI-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI-Bold.woff") format("woff"), url("../fonts/SegoeUI-Bold.ttf") format("truetype");
-  font-weight: bold;
   font-style: normal; }
 
 html {
@@ -74,13 +60,13 @@ p {
 
 h1,
 .h1 {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: calc( 0.04819 * 100vmin + 5.01205px);
-  line-height: calc( 0.06777 * 100vmin + 2.04819px); }
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 64px;
+  line-height: 85px; }
 
 h2,
 .h2 {
-  font: 28px/40px 'Segoe UI', sans-serif;
+  font: 28px/40px 'Yeseva One', sans-serif;
   margin-bottom: 55px;
   text-align: center; }
   @media (min-width: 500px) {
@@ -285,7 +271,7 @@ button {
       flex: 1 0 auto; }
 
 .container-fluid {
-  max-width: 1174px; }
+  max-width: 1150px; }
 
 .header {
   position: absolute;
@@ -312,7 +298,7 @@ button {
   color: #272641;
   text-align: center; }
   .consult-form__title {
-    font: 24px/36px 'Segoe UI', sans-serif;
+    font: 24px/36px 'Yeseva One', sans-serif;
     margin-bottom: 16px; }
   .consult-form__subtitle {
     font-size: 16px;
@@ -333,7 +319,7 @@ button {
     .consult-form .btn__text {
       font-size: 14px;
       line-height: 20px; }
-      @media (min-width: 770px) {
+      @media (min-width: 768px) {
         .consult-form .btn__text {
           font-size: 20px;
           line-height: 24px; } }
@@ -461,7 +447,7 @@ button {
     max-width: 721px;
     max-height: 415px;
     z-index: -1; }
-    @media (min-width: 770px) {
+    @media (min-width: 768px) {
       .caption__cloud {
         top: calc(-12vw);
         width: 55vw;
@@ -593,95 +579,168 @@ button {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
   background-position: bottom left;
-  padding: 0 0 190px 0;
+  padding: 0 0 200px 0;
   position: relative;
   overflow: hidden; }
   @media (min-width: 1150px) {
     .preface {
       background-position: bottom center; } }
+  @media (min-width: 1400px) {
+    .preface {
+      padding: 0 0 300px 0; } }
   .preface__wrap {
-    max-height: 480px;
-    height: 100vh;
-    padding-top: 80px; }
+    padding-top: 120px;
+    padding-bottom: 50px; }
     @media (min-width: 1280px) {
       .preface__wrap {
-        padding-top: 0;
-        max-height: 9999px; } }
+        max-height: 560px; } }
+    @media (min-width: 1400px) {
+      .preface__wrap {
+        max-height: 9999px;
+        padding-top: 220px;
+        padding-bottom: 0; } }
     .preface__wrap:before {
       content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
-      margin-left: -50px;
+      margin-left: 0;
       background: url(../img/preface/1.png) no-repeat;
       background-size: cover;
-      width: 568px;
-      height: 912px;
+      width: 400px;
+      height: 640px;
       display: none; }
-      @media (min-width: 1150px) {
+      @media (min-width: 500px) {
         .preface__wrap:before {
-          width: calc(100vmin / 1.6055);
-          height: 100vmin;
+          margin-left: 30px;
           display: block; } }
-      @media (min-width: 1150px) {
+      @media (min-width: 1280px) {
         .preface__wrap:before {
-          margin-left: 50px; } }
+          width: 400px;
+          height: 640px; } }
+      @media (min-width: 1400px) {
+        .preface__wrap:before {
+          width: 568px;
+          height: 912px; } }
   .preface h1 {
-    margin-bottom: calc( 0.0256 * 100vmin + 0.66265px);
-    text-align: center; }
+    text-align: center;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px; }
     @media (min-width: 500px) {
       .preface h1 {
-        text-align: left; } }
+        text-align: left;
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 25px; } }
+    @media (min-width: 1400px) {
+      .preface h1 {
+        font-size: 64px;
+        line-height: 85px;
+        margin-bottom: 32px; } }
     .preface h1 span {
       display: block;
-      padding-top: calc( 0.01506 * 100vmin + -3.43373px);
-      font: calc( 0.0241 * 100vmin + 6.50602px)/calc( 0.0241 * 100vmin + 12.50602px) "Montserrat", sans-serif; }
+      font: 24px/30px 'Montserrat', sans-serif;
+      padding-top: 5px; }
+      @media (min-width: 500px) {
+        .preface h1 span {
+          font-size: 30px;
+          line-height: 36px; } }
+      @media (min-width: 1400px) {
+        .preface h1 span {
+          font-size: 36px;
+          line-height: 42px;
+          padding-top: 15px; } }
     .preface h1 b {
       white-space: nowrap;
       font-weight: 600; }
   .preface__subtitle {
-    font-size: calc( 0.01205 * 100vmin + 9.25301px);
-    line-height: calc( 0.01506 * 100vmin + 13.56627px);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
     z-index: 1;
     position: relative;
-    margin-bottom: calc( 0.03916 * 100vmin + 0.07229px);
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px; }
     @media (min-width: 500px) {
       .preface__subtitle {
-        margin-bottom: 0;
         -ms-flex-pack: start;
             justify-content: start; } }
-    @media (min-width: 1150px) {
+    @media (min-width: 1280px) {
       .preface__subtitle {
-        margin-bottom: calc( 0.03916 * 100vmin + 0.07229px); } }
+        margin-bottom: 10px; } }
+    @media (min-width: 1400px) {
+      .preface__subtitle {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 48px; } }
     .preface__subtitle span:first-of-type {
-      width: calc( 0.07229 * 100vmin + 19.51807px);
-      height: calc( 0.07229 * 100vmin + 19.51807px);
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background-color: #ffdd71;
       z-index: -1; }
+      @media (min-width: 1400px) {
+        .preface__subtitle span:first-of-type {
+          width: 108px;
+          height: 108px; } }
     .preface__subtitle span:last-of-type {
-      margin-left: calc( -0.03614 * 100vmin + -9.75904px); }
+      margin-left: -40px; }
+      @media (min-width: 1400px) {
+        .preface__subtitle span:last-of-type {
+          margin-left: -54px; } }
   .preface__consult {
     text-align: center; }
+    @media (min-width: 500px) {
+      .preface__consult {
+        display: inline-block;
+        vertical-align: top; } }
+    @media (min-width: 1280px) {
+      .preface__consult {
+        text-align: center;
+        display: block; } }
     .preface__consult p {
       color: #59586e;
-      text-shadow: 0 1px #fff;
-      font-size: calc( 0.00602 * 100vmin + 8.62651px);
-      line-height: calc( 0.00151 * 100vmin + 17.15663px);
-      margin-bottom: calc( 0.01506 * 100vmin + 6.56627px); }
-      @media (min-width: 1150px) {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 10px;
+      text-align: center; }
+      @media (min-width: 1400px) {
         .preface__consult p {
-          text-shadow: none; } }
+          margin-bottom: 25px; } }
       .preface__consult p span {
-        max-width: calc( 0.0753 * 100vmin + 157.83133px);
+        max-width: 250px;
         display: inline-block;
         vertical-align: top; }
+  .preface .btn__holder {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 15px 40px; }
+    @media (min-width: 1400px) {
+      .preface .btn__holder {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 23px 67px; } }
+  .preface .btn__ico {
+    width: 42px;
+    height: 42px;
+    line-height: 42px; }
+    @media (min-width: 1400px) {
+      .preface .btn__ico {
+        width: 62px;
+        height: 62px;
+        line-height: 62px; } }
+    .preface .btn__ico .icon-phone {
+      width: 20px;
+      height: 20px; }
+      @media (min-width: 1400px) {
+        .preface .btn__ico .icon-phone {
+          width: 30px;
+          height: 30px; } }
 
 .scrolldown {
   position: absolute;
@@ -699,8 +758,12 @@ button {
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  width: 80px; }
   @media (min-width: 1400px) {
+    .scrolldown {
+      width: 120px; } }
+  @media (min-width: 1280px) {
     .scrolldown.active {
       visibility: visible;
       opacity: 1; } }
@@ -738,14 +801,19 @@ button {
     font-size: 14px;
     line-height: 18px;
     transform: rotate(-90deg);
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    white-space: nowrap; }
 
 .postface {
   margin: -120px 0 90px 0; }
   .postface__holder {
     padding-left: 10px;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    margin: 0 -15px; }
+    @media (min-width: 1024px) {
+      .postface__holder {
+        margin: 0; } }
   .postface__img {
     position: absolute;
     width: 172px;
@@ -792,9 +860,13 @@ button {
   .postface__item {
     position: relative;
     z-index: 1;
-    height: 100%; }
+    height: 100%;
+    margin: 015px; }
+    @media (min-width: 1024px) {
+      .postface__item {
+        margin: 0; } }
   .postface__content {
-    padding: 80px 40px 85px;
+    padding: 80px 40px 45px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 30px 0 rgba(193, 189, 245, 0.4);
@@ -803,9 +875,6 @@ button {
     position: relative;
     color: #59586e;
     height: 100%; }
-    @media (min-width: 1024px) {
-      .postface__content {
-        padding: 80px 40px 45px; } }
     .postface__content:before {
       content: '';
       position: absolute;
@@ -926,7 +995,7 @@ button {
   .which__title {
     position: relative;
     margin-top: -30px; }
-    @media (min-width: 770px) {
+    @media (min-width: 768px) {
       .which__title {
         margin-top: 0; } }
     .which__title h2 {
@@ -936,7 +1005,7 @@ button {
       position: absolute;
       top: -20px;
       display: none; }
-      @media (min-width: 770px) {
+      @media (min-width: 768px) {
         .which__title:before, .which__title:after {
           display: block; } }
       @media (min-width: 1150px) {
@@ -979,21 +1048,21 @@ button {
   .which__item {
     margin-bottom: 30px; }
 
-.visa-type {
+.visa-direction {
   position: relative;
   padding-bottom: 115px;
   cursor: pointer;
   height: 100%; }
-  .visa-type__illustr {
+  .visa-direction__illustr {
     position: absolute; }
-    .visa-type__illustr:before, .visa-type__illustr:after {
+    .visa-direction__illustr:before, .visa-direction__illustr:after {
       content: '';
       position: absolute;
       opacity: 0;
       transition: .3s; }
-  .visa-type:hover .visa-type__illustr:before, .visa-type:hover .visa-type__illustr:after {
+  .visa-direction:hover .visa-direction__illustr:before, .visa-direction:hover .visa-direction__illustr:after {
     opacity: 1; }
-  .visa-type:before {
+  .visa-direction:before {
     content: '';
     position: absolute;
     left: 0;
@@ -1004,9 +1073,9 @@ button {
     box-shadow: 50px 50px 60px 10px rgba(85, 77, 217, 0.1);
     transition: .3s;
     z-index: -1; }
-  .visa-type:hover:before {
+  .visa-direction:hover:before {
     opacity: 1; }
-  .visa-type__img {
+  .visa-direction__img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -1015,9 +1084,9 @@ button {
     border-radius: 10px 10px 0 0;
     overflow: hidden; }
     @media (min-width: 1024px) {
-      .visa-type__img {
+      .visa-direction__img {
         min-height: 455px; } }
-  .visa-type__holder {
+  .visa-direction__holder {
     padding-top: 6px;
     position: absolute;
     bottom: 0;
@@ -1027,17 +1096,17 @@ button {
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
     border-radius: 0 0 10px 10px; }
-  .visa-type__content {
+  .visa-direction__content {
     padding: 25px 14px 37px;
     background: #fff;
     text-align: center;
     position: relative;
     transition: .3s; }
-    @media (min-width: 770px) {
-      .visa-type__content {
+    @media (min-width: 768px) {
+      .visa-direction__content {
         padding-left: 44px;
         padding-right: 44px; } }
-    .visa-type__content:before {
+    .visa-direction__content:before {
       content: '';
       position: absolute;
       top: -6px;
@@ -1045,33 +1114,33 @@ button {
       right: 0;
       height: 13px;
       background: url(../img/pattern.png); }
-    .visa-type__content .btn {
+    .visa-direction__content .btn {
       width: 100%;
       white-space: normal;
       max-width: 292px; }
-      .visa-type__content .btn:before {
+      .visa-direction__content .btn:before {
         display: none; }
-      .visa-type__content .btn__holder {
+      .visa-direction__content .btn__holder {
         padding-left: 20px;
         padding-right: 20px; }
-  .visa-type:hover .visa-type__content {
+  .visa-direction:hover .visa-direction__content {
     padding-top: 15px; }
-  .visa-type:hover .visa-type__holder {
+  .visa-direction:hover .visa-direction__holder {
     max-height: 999px;
     transition: max-height .5s ease-in-out; }
-  .visa-type__text {
+  .visa-direction__text {
     padding: 0 44px; }
-  .visa-type__name {
-    font: 36px/50px 'Segoe UI', sans-serif;
+  .visa-direction__name {
+    font: 36px/50px 'Yeseva One', sans-serif;
     margin-bottom: 13px; }
-  .visa-type__amount {
+  .visa-direction__amount {
     color: #59586e;
     margin-bottom: 14px;
     visibility: hidden;
     transition: .2s; }
-  .visa-type:hover .visa-type__amount {
+  .visa-direction:hover .visa-direction__amount {
     visibility: visible; }
-  .visa-type__price {
+  .visa-direction__price {
     visibility: hidden;
     vertical-align: top;
     display: inline-block;
@@ -1081,12 +1150,12 @@ button {
     color: #59586e;
     margin-bottom: 33px;
     transition: .5s; }
-  .visa-type__btn {
+  .visa-direction__btn {
     visibility: hidden;
     transition: .5s; }
-  .visa-type:hover .visa-type__price {
+  .visa-direction:hover .visa-direction__price {
     visibility: visible; }
-  .visa-type:hover .visa-type__btn {
+  .visa-direction:hover .visa-direction__btn {
     visibility: visible; }
 
 .difficulties {
@@ -1172,7 +1241,7 @@ button {
     .difficulties__img img {
       max-width: 100%;
       position: relative; }
-    @media (min-width: 770px) {
+    @media (min-width: 768px) {
       .difficulties__img {
         display: block; } }
   .difficulties__caption {
@@ -1198,7 +1267,7 @@ button {
     z-index: 2;
     display: none;
     opacity: .7; }
-    @media (min-width: 770px) {
+    @media (min-width: 768px) {
       .steps__holder:before {
         display: block; } }
     @media (min-width: 1024px) {
@@ -1207,7 +1276,7 @@ button {
 
 .steps h2 {
   text-align: left; }
-  @media (min-width: 770px) {
+  @media (min-width: 768px) {
     .steps h2 {
       margin-bottom: 80px; } }
   .steps h2 i {
@@ -1218,7 +1287,7 @@ button {
       .steps h2 i {
         display: inline; } }
   .steps h2 span {
-    font: 28px/38px 'Segoe UI', sans-serif;
+    font: 28px/38px 'Yeseva One', sans-serif;
     text-shadow: 0 1px #6f63d3;
     color: #fff;
     background: #8d88fa;
@@ -1233,8 +1302,13 @@ button {
 
 .steps .consult-form {
   padding-top: 30px; }
+  @media (min-width: 1024px) {
+    .steps .consult-form {
+      padding-top: 30px;
+      max-width: 360px;
+      margin: 0 0 0 auto; } }
   .steps .consult-form__subtitle {
-    font-family: "Segoe UI", sans-serif; }
+    font-family: "Yeseva One", sans-serif; }
   .steps .consult-form .btn__text {
     font-size: 16px;
     line-height: 20px; }
@@ -1255,6 +1329,9 @@ button {
     .steps__caption .caption__holder {
       padding-top: 40px;
       padding-bottom: 20px; }
+
+.visa-type__title h2 {
+  max-width: 572px; }
 
 .footer {
   -ms-flex: 0 0 auto;
