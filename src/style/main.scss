@@ -41,7 +41,7 @@ h1,
   line-height: 85px;
 }
 h2,
-.h2 {
+.h2, h3 {
   font: 28px/40px 'Yeseva One', sans-serif;
   margin-bottom: 55px;
   text-align: center;
@@ -61,6 +61,13 @@ h2,
     }
   }
 }
+h3 {
+  margin-bottom: 30px;
+  text-align: left;
+  @include bp($md) {
+    margin-bottom: 40px;
+  }
+}
 .title {
   text-align: center;
   h2 {
@@ -68,6 +75,89 @@ h2,
     vertical-align: top;
     span {
       color: #59586e;
+    }
+  }
+}
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -10px 44px;
+  border-bottom: none;
+  @include bp($ml) {
+    margin: 0 -2% 64px;
+  }
+  &__item {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex: 100%;
+    @include bp($sm) {
+      flex: 50%;
+    }
+    @include bp($md) {
+      flex: 30%;
+    }
+    @include bp($ml) {
+      padding: 0 2%;
+      flex: 1;
+    }
+  }
+  a {
+    border: 1px solid #4b3fcc;
+    border-radius: 22px;
+    padding: 15px 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #272641;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    background: #f2f4fc;
+    @include bp($sm) {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 20px 10px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      transition: all .3s;
+      opacity: 0;
+    }
+    &:before {
+      top: 2px;
+      height: 100%;
+      left: 0;
+      right: 0;
+      border-bottom: 2px solid #554db3;
+      border-radius: 22px;
+    }
+    &:after {
+      left: 20%;
+      right: 20%;
+      height: 30px;
+      background: #8d88fa;
+      box-shadow: 0 5px 30px 0 #8d88fa;
+      z-index: -1;
+      bottom: 0;
+    }
+    &.active,
+    &:hover {
+      background: #8d88fa;
+      border-color: transparent;
+      color: #fff;
+      font-weight: 600;
+      &:before,
+      &:after {
+        opacity: 1;
+      }
     }
   }
 }
@@ -510,7 +600,7 @@ button {
     background: url(../img/pattern2.png);
     background-position: top center;
     height: 10px;
-    top: -10px;
+    top: -9px;
     &:before,
     &:after {
       content: '';
@@ -534,7 +624,7 @@ button {
     right: 30px;
     background: #ffe68c;
     height: 30px;
-    bottom: 0;
+    bottom: 1px;
     &:before,
     &:after {
       content: '';
@@ -1433,9 +1523,9 @@ button {
   margin-bottom: 100px;
   &__holder {
     position: relative;
-    margin-bottom: 345px;
+    margin-bottom: 270px;
     @include bp($sm) {
-      margin-bottom: 540px;
+      margin-bottom: 430px;
     }
     @include bp($ml) {
       margin-bottom: 0;
@@ -1444,7 +1534,7 @@ button {
       content: '';
       position: absolute;
       left: 50%;
-      bottom: -345px;
+      bottom: -270px;
       margin-left: -140px;
       background: url(../img/steps/1.png) no-repeat;
       background-size: cover;
@@ -1454,7 +1544,7 @@ button {
       @include bp($sm) {
         width: 400px;
         height: 485px;
-        bottom: -540px;
+        bottom: -430px;
         margin-left: -240px;
       }
       @include bp($ml) {
@@ -1543,6 +1633,84 @@ button {
   &__title {
     h2 {
       max-width: 572px;
+    }
+  }
+  h3 {
+    @include bp($xl) {
+      padding-left: 30px;
+    }
+  }
+  &__holder {
+
+  }
+  &__img {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    &:before {
+      content: '';
+      position: absolute;
+      background: url(../img/visa-type/back.png) no-repeat;
+      background-size: cover;
+      left: 50%;
+      top: 50%;
+      width: 959px;
+      height: 752px;
+      margin-left: -479px;
+      margin-top: -376px;
+      z-index: -1;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 64px;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  &__btn {
+    text-align: center;
+    .icon-click {
+      fill: #fff;
+      width: 30px;
+      height: 30px;
+      filter: drop-shadow( 0 1px 0 #675fd5);
+    }
+  }
+}
+.travel-img {
+  margin: 0 auto;
+  width: 56.33333%;
+  position: relative;
+  &__item {
+    position: absolute;
+    &:first-of-type {
+      position: relative;
+      max-width: 100%;
+    }
+    &:nth-of-type(2) {
+      width: 102.95858%;
+      left: 0;
+      bottom: 25.95833%;
+      opacity: .2;
+      z-index: -1;
+    }
+    &:nth-of-type(3) {
+      width: 105.6213%;
+      left: 32.24852%;
+      bottom: 72.08333%;
+    }
+    &:nth-of-type(4) {
+      width: 35.79882%;
+      right: 90.23669%;
+      bottom: 88.75%;
     }
   }
 }
