@@ -1,0 +1,15 @@
+@mixin bp($res) {
+  @media (min-width: $res) {
+    @content;
+  }
+}
+$min-layout-height: 560;
+$max-layout-height: 1224;
+@function calcFluidSize($f-min, $f-max, $v-min: $min-layout-height, $v-max: $max-layout-height) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vmin + #{$b} );
+}
