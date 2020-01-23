@@ -15,6 +15,7 @@ var gulp 	    = require('gulp'),
   replace     = require('gulp-replace'),
 	pug         = require('gulp-pug'),
   beautify    = require('gulp-html-beautify'),
+	gcmq 				= require('gulp-group-css-media-queries'),
 	reload 			= browserSync.reload;
 
 var projectName = 'visavia';
@@ -93,6 +94,7 @@ gulp.task('fonts:build', () => {
 gulp.task('css:build', ()=> {
 	return gulp.src(path.src.css)
 		.pipe(plumber())
+    .pipe(gcmq())
 		.pipe(prefixer())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));
@@ -101,6 +103,7 @@ gulp.task('sass:build', ()=> {
 	return gulp.src(path.src.sass)
 		.pipe(plumber())
 		.pipe(sass())
+    .pipe(gcmq())
 		.pipe(prefixer())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));

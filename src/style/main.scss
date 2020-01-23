@@ -45,7 +45,7 @@ h2,
   font: 28px/40px 'Yeseva One', sans-serif;
   margin-bottom: 55px;
   text-align: center;
-  @include bp($sm) {
+  @include bp($md) {
     font-size: 36px;
     line-height: 50px;
     margin-bottom: 64px;
@@ -54,7 +54,7 @@ h2,
     font: 18px/26px 'Montserrat', sans-serif;
     display: block;
     padding-top: 15px;
-    @include bp($sm) {
+    @include bp($md) {
       font-size: 24px;
       line-height: 32px;
       padding-top: 20px;
@@ -171,8 +171,8 @@ h2,
     align-items: center;
     background: radial-gradient(at center 10px, #b8b5ff 0%, #8482eb 100%);
     border-bottom: 2px solid #b8b3ff;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 1px #675fd5;
@@ -182,6 +182,10 @@ h2,
     margin-bottom: -4px;
     position: relative;
     z-index: 1;
+    @include bp($md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -886,7 +890,7 @@ button {
     z-index: 2;
     transform: rotate(0deg);
     display: none;
-    transition: .3s;
+    transition: .5s;
     opacity: 0;
     @include bp(1481px) {
       display: block;
@@ -1015,9 +1019,9 @@ button {
   padding-top: 30px;
   z-index: 1;
   overflow: hidden;
-  @include bp($lg) {
+  /*@include bp($lg) {
     overflow: visible;
-  }
+  }*/
   h2 {
     text-align: left;
   }
@@ -1035,10 +1039,10 @@ button {
     }
   }
   &__content {
-    padding: 75px 35px;
+    padding: 65px 35px 55px;
     position: relative;
     z-index: 2;
-    @include bp($sm) {
+    @include bp($md) {
       padding: 75px;
     }
   }
@@ -1047,16 +1051,27 @@ button {
     left: 50%;
     bottom: 100px;
     z-index: 1;
+    display: none;
+    @include bp($sm) {
+      display: block;
+    }
     img {
       max-width: 150%;
       margin-left: -15%;
-      @include bp($ml) {
-        margin-left: -22%;
-        max-width: 122%;
+      @include bp($sm) {
+        margin-left: -5%;
+        max-width: 180%;
       }
-      @include bp($lg) {
+      @include bp($md) {
+        margin-left: -18%;
+        max-width: 150%;
+      }
+      @include bp($ml) {
         margin-left: -28%;
-        max-width: 128%;
+        max-width: 150%;
+      }
+      @include bp($xl) {
+        margin-left: -22%;
       }
     }
   }
@@ -1107,7 +1122,7 @@ button {
       height: calc(14vw / 1.26);
       transform: rotate(0deg);
       opacity: 0;
-      transition: .3s;
+      transition: .5s;
       @include bp($ml) {
         left: 8%;
       }
@@ -1122,7 +1137,7 @@ button {
       height: calc(14vw / 1.40);
       transform: rotate(0deg);
       opacity: 0;
-      transition: .3s;
+      transition: .5s;
       @include bp($ml) {
         right: 8%;
       }
@@ -1270,10 +1285,6 @@ button {
     margin-bottom: 33px;
     transition: .5s;
   }
-  &__btn {
-    visibility: hidden;
-    transition: .5s;
-  }
   &:hover &__price {
     visibility: visible;
   }
@@ -1308,13 +1319,17 @@ button {
     list-style: none;
     padding-left: 0;
     z-index: 2;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    position: relative;
+    @include bp($md) {
+      margin-bottom: 80px;
+    }
     li {
       color: #59586e;
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 40px;
       text-align: center;
+      margin-bottom: 40px;
       @include bp($sm) {
         text-align: left;
       }
@@ -1360,22 +1375,29 @@ button {
   }
   &__content {
     position: relative;
-
+    height: 424px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    @include bp($md) {
+      height: auto;
+    }
   }
   &__img {
     position: absolute;
     bottom: 0;
     left: 50%;
     right: 0;
-    margin-left: -250px;
-    width: 500px;
-    height: 708px;
+    margin-left: -150px;
+    width: 300px;
+    height: 424px;
     z-index: -1;
-    display: none;
+    //display: none;
     &:before {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       height: 300px;
       right: 0;
@@ -1387,7 +1409,14 @@ button {
       position: relative;
     }
     @include bp($md) {
-      display: block;
+      margin-left: -165px;
+      width: 330px;
+      height: 467px;
+    }
+    @include bp($lg) {
+      width: 500px;
+      height: 708px;
+      margin-left: -250px;
     }
   }
   &__caption {
@@ -1401,33 +1430,45 @@ button {
   }
 }
 .steps {
+  margin-bottom: 100px;
   &__holder {
     position: relative;
+    margin-bottom: 345px;
+    @include bp($sm) {
+      margin-bottom: 540px;
+    }
+    @include bp($ml) {
+      margin-bottom: 0;
+    }
     &:before {
       content: '';
       position: absolute;
       left: 50%;
-      bottom: 0;
-      margin-left: -290px;
+      bottom: -345px;
+      margin-left: -140px;
       background: url(../img/steps/1.png) no-repeat;
       background-size: cover;
-      width: 500px;
-      height: 607px;
+      width: 260px;
+      height: 315px;
       z-index: 2;
-      display: none;
-      opacity: .7;
-      @include bp($md) {
-        display: block;
+      @include bp($sm) {
+        width: 400px;
+        height: 485px;
+        bottom: -540px;
+        margin-left: -240px;
       }
       @include bp($ml) {
-        opacity: 1;
+        margin-left: -310px;
+        width: 500px;
+        height: 607px;
+        bottom: 0;
       }
     }
   }
   h2 {
-    text-align: left;
     @include bp($md) {
       margin-bottom: 80px;
+      text-align: left;
     }
     i {
       font-style: normal;
@@ -1453,11 +1494,10 @@ button {
     }
   }
   .consult-form {
-    padding-top: 30px;
-    @include bp($ml) {
+    max-width: 400px;
+    margin: 0 auto;
+    @include bp($md) {
       padding-top: 30px;
-      max-width: 360px;
-      margin: 0 0 0 auto;
     }
     &__subtitle {
       font-family: "Yeseva One", sans-serif;
@@ -1484,6 +1524,18 @@ button {
         padding-top: 40px;
         padding-bottom: 20px;
       }
+    }
+  }
+  .checked-list {
+    text-align: center;
+    max-width: 230px;
+    margin: 0 auto;
+    @include bp($md) {
+      text-align: left;
+      max-width: 9999px;
+    }
+    li {
+      text-align: left;
     }
   }
 }
