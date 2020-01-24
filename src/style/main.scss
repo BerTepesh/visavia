@@ -385,6 +385,8 @@ button {
 .consult-form {
   color: #272641;
   text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
   &__title {
     font: 24px/36px 'Yeseva One', sans-serif;
     margin-bottom: 16px;
@@ -419,13 +421,13 @@ button {
       }
     }
     &__ico {
-      width: calcFluidSize(36, 62);
-      height: calcFluidSize(36, 62);
-      line-height: calcFluidSize(36, 62);
+      width: calcFluidSize(40, 62);
+      height: calcFluidSize(40, 62);
+      line-height: calcFluidSize(40, 62);
     }
     .icon-phone {
-      width: calcFluidSize(18, 30);
-      height: calcFluidSize(18, 30);
+      width: calcFluidSize(20, 30);
+      height: calcFluidSize(20, 30);
     }
   }
   .custom-control {
@@ -1692,8 +1694,6 @@ button {
     }
   }
   .consult-form {
-    max-width: 400px;
-    margin: 0 auto;
     @include bp($md) {
       padding-top: 30px;
     }
@@ -1793,9 +1793,9 @@ button {
     .btn {
       width: 100%;
       &__ico {
-        width: calcFluidSize(42, 62);
-        height: calcFluidSize(42, 62);
-        line-height: calcFluidSize(42, 62);
+        width: calcFluidSize(46, 62);
+        height: calcFluidSize(46, 62);
+        line-height: calcFluidSize(46, 62);
       }
       .icon-click {
         width: calcFluidSize(22, 30);
@@ -1855,6 +1855,7 @@ button {
   }
 }
 .calc {
+  margin-bottom: 100px;
   .skewed__top {
     background-image: url(../img/skewed2.png);
   }
@@ -1890,13 +1891,13 @@ button {
         padding-right: 20px;
       }
       &__ico {
-        width: calcFluidSize(36, 62);
-        height: calcFluidSize(36, 62);
-        line-height: calcFluidSize(36, 62);
+        width: calcFluidSize(46, 62);
+        height: calcFluidSize(46, 62);
+        line-height: calcFluidSize(46, 62);
       }
       .icon-click {
-        width: calcFluidSize(18, 30);
-        height: calcFluidSize(18, 30);
+        width: calcFluidSize(22, 30);
+        height: calcFluidSize(22, 30);
       }
     }
   }
@@ -1929,6 +1930,205 @@ button {
         background: linear-gradient(0deg, rgba(255, 230, 140, 1) 0%, rgba(255, 230, 140, 0) 100%);
         left: 0;
         right: 0;
+      }
+    }
+  }
+}
+.faq {
+  background: url(../img/faq/back2.png) no-repeat;
+  background-position: center -130px;
+  background-size: cover;
+  position: relative;
+
+  z-index: 1;
+  &__back {
+    margin: -120px auto 0;
+    display: block;
+    position: relative;
+    /*max-width: 1920px;
+    @include bp(1920px) {
+      background: linear-gradient(90deg, rgba(242,244,252,1) 0%, rgba(242,244,252,0) 100px, rgba(242,244,252,0) calc(100% - 100px), rgba(242,244,252,1) 100%);
+    }*/
+    img {
+      width: 100%;
+      position: relative;
+      z-index: -1;
+    }
+  }
+  &__title {
+    margin-bottom: 113px;
+    @include bp($md) {
+      text-align: left;
+    }
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    max-width: 296px;
+    color: #6d6d6d;
+    margin: 0 auto 80px;
+    @include bp($md) {
+      margin: 0 0 80px 0;
+    }
+    .icon-qst {
+      position: absolute;
+      width: 134px;
+      height: 179px;
+      top: 50%;
+      left: 50%;
+      margin-left: -67px;
+      margin-top: -109px;
+      fill: #ededf0;
+      z-index: -1;
+    }
+    b {
+      display: block;
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+  }
+  &__manager {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 48px;
+    @include bp($sm) {
+      margin-bottom: 0;
+    }
+    @include bp($md) {
+      margin-bottom: 48px;
+    }
+    &-img {
+      width: 105px;
+      border-radius: 0 0 105px 105px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        width: 103px;
+        height: 103px;
+        left: 0;
+        background: #9693de;
+        border-radius: 105px;
+        z-index: -1;
+        box-shadow: 0 0 50px 0 rgba(151, 145, 222, .7);
+      }
+      img {
+        //width: 100%;
+      }
+    }
+    b {
+      display: block;
+    }
+  }
+  &__btn {
+    @include bp($sm) {
+      .btn {
+        width: 100%;
+      }
+      .btn__holder {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .btn__ico {
+      width: calcFluidSize(46, 62);
+      height: calcFluidSize(46, 62);
+      line-height: calcFluidSize(46, 62);
+    }
+    .icon-qst {
+      width: calcFluidSize(18, 23);
+      height: calcFluidSize(26, 31);
+      fill: #fff;
+      filter: drop-shadow( 0 1px 0 #675fd5);
+    }
+
+  }
+  &-list {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    li {
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 20px;
+    }
+    &__btn {
+      min-height: 114px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 20px 108px 20px 38px;
+      font-size: 16px;
+      line-height: 22px;
+      color: #333;
+      position: relative;
+      @include bp($sm) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 20px 108px 20px 48px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border-right: 2px solid #afafaf;
+        border-top: 2px solid #afafaf;
+        transform: rotate(135deg);
+        transition: .3s;
+      }
+      &.collapsed:before {
+        transform: rotate(45deg);
+      }
+      &:hover {
+        color: #333;
+      }
+      span {
+        max-width: 410px;
+      }
+    }
+    &__content {
+      padding: 0 38px 20px;
+      font-size: 16px;
+      line-height: 24px;
+      .btn {
+        width: 100%;
+      }
+      .btn__holder {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include bp($sm) {
+        padding: 0 48px 20px;
+        font-size: 18px;
+        line-height: 24px;
+        .btn {
+          width: auto;
+        }
+        .btn__holder {
+          padding-left: 67px;
+          padding-right: 67px;
+        }
+      }
+      .btn__ico {
+        width: calcFluidSize(36, 62);
+        height: calcFluidSize(36, 62);
+        line-height: calcFluidSize(36, 62);
+      }
+      .icon-click {
+        width: calcFluidSize(18, 23);
+        height: calcFluidSize(26, 31);
+        fill: #fff;
+        filter: drop-shadow( 0 1px 0 #675fd5);
       }
     }
   }

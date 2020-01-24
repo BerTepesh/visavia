@@ -449,6 +449,8 @@ button {
 .consult-form {
   color: #272641;
   text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .consult-form__title {
@@ -490,14 +492,14 @@ button {
 }
 
 .consult-form .btn__ico {
-  width: calc( 0.03916 * 100vmin + 14.07229px);
-  height: calc( 0.03916 * 100vmin + 14.07229px);
-  line-height: calc( 0.03916 * 100vmin + 14.07229px);
+  width: calc( 0.03313 * 100vmin + 21.44578px);
+  height: calc( 0.03313 * 100vmin + 21.44578px);
+  line-height: calc( 0.03313 * 100vmin + 21.44578px);
 }
 
 .consult-form .btn .icon-phone {
-  width: calc( 0.01807 * 100vmin + 7.87952px);
-  height: calc( 0.01807 * 100vmin + 7.87952px);
+  width: calc( 0.01506 * 100vmin + 11.56627px);
+  height: calc( 0.01506 * 100vmin + 11.56627px);
 }
 
 .consult-form .custom-control {
@@ -1663,11 +1665,6 @@ button {
   display: inline-block;
 }
 
-.steps .consult-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
 .steps .consult-form__subtitle {
   font-family: "Yeseva One", sans-serif;
 }
@@ -1765,9 +1762,9 @@ button {
 }
 
 .visa-type__btn .btn__ico {
-  width: calc( 0.03012 * 100vmin + 25.13253px);
-  height: calc( 0.03012 * 100vmin + 25.13253px);
-  line-height: calc( 0.03012 * 100vmin + 25.13253px);
+  width: calc( 0.0241 * 100vmin + 32.50602px);
+  height: calc( 0.0241 * 100vmin + 32.50602px);
+  line-height: calc( 0.0241 * 100vmin + 32.50602px);
 }
 
 .visa-type__btn .btn .icon-click {
@@ -1826,6 +1823,10 @@ button {
   transform: rotate(25deg);
 }
 
+.calc {
+  margin-bottom: 100px;
+}
+
 .calc .skewed__top {
   background-image: url(../img/skewed2.png);
 }
@@ -1866,14 +1867,14 @@ button {
 }
 
 .calc__btn .btn__ico {
-  width: calc( 0.03916 * 100vmin + 14.07229px);
-  height: calc( 0.03916 * 100vmin + 14.07229px);
-  line-height: calc( 0.03916 * 100vmin + 14.07229px);
+  width: calc( 0.0241 * 100vmin + 32.50602px);
+  height: calc( 0.0241 * 100vmin + 32.50602px);
+  line-height: calc( 0.0241 * 100vmin + 32.50602px);
 }
 
 .calc__btn .btn .icon-click {
-  width: calc( 0.01807 * 100vmin + 7.87952px);
-  height: calc( 0.01807 * 100vmin + 7.87952px);
+  width: calc( 0.01205 * 100vmin + 15.25301px);
+  height: calc( 0.01205 * 100vmin + 15.25301px);
 }
 
 .calc__docs {
@@ -1910,6 +1911,187 @@ button {
   background: linear-gradient(0deg, #ffe68c 0%, rgba(255, 230, 140, 0) 100%);
   left: 0;
   right: 0;
+}
+
+.faq {
+  background: url(../img/faq/back2.png) no-repeat;
+  background-position: center -130px;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.faq__back {
+  margin: -120px auto 0;
+  display: block;
+  position: relative;
+  /*max-width: 1920px;
+    @include bp(1920px) {
+      background: linear-gradient(90deg, rgba(242,244,252,1) 0%, rgba(242,244,252,0) 100px, rgba(242,244,252,0) calc(100% - 100px), rgba(242,244,252,1) 100%);
+    }*/
+}
+
+.faq__back img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.faq__title {
+  margin-bottom: 113px;
+}
+
+.faq__description {
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  max-width: 296px;
+  color: #6d6d6d;
+  margin: 0 auto 80px;
+}
+
+.faq__description .icon-qst {
+  position: absolute;
+  width: 134px;
+  height: 179px;
+  top: 50%;
+  left: 50%;
+  margin-left: -67px;
+  margin-top: -109px;
+  fill: #ededf0;
+  z-index: -1;
+}
+
+.faq__description b {
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.faq__manager {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 48px;
+}
+
+.faq__manager-img {
+  width: 105px;
+  border-radius: 0 0 105px 105px;
+  position: relative;
+}
+
+.faq__manager-img:before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  width: 103px;
+  height: 103px;
+  left: 0;
+  background: #9693de;
+  border-radius: 105px;
+  z-index: -1;
+  box-shadow: 0 0 50px 0 rgba(151, 145, 222, 0.7);
+}
+
+.faq__manager b {
+  display: block;
+}
+
+.faq__btn .btn__ico {
+  width: calc( 0.0241 * 100vmin + 32.50602px);
+  height: calc( 0.0241 * 100vmin + 32.50602px);
+  line-height: calc( 0.0241 * 100vmin + 32.50602px);
+}
+
+.faq__btn .icon-qst {
+  width: calc( 0.00753 * 100vmin + 13.78313px);
+  height: calc( 0.00753 * 100vmin + 21.78313px);
+  fill: #fff;
+  filter: drop-shadow(0 1px 0 #675fd5);
+}
+
+.faq-list {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-list li {
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.faq-list__btn {
+  min-height: 114px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  cursor: pointer;
+  padding: 20px 108px 20px 38px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+  position: relative;
+}
+
+.faq-list__btn:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border-right: 2px solid #afafaf;
+  border-top: 2px solid #afafaf;
+  transform: rotate(135deg);
+  transition: .3s;
+}
+
+.faq-list__btn.collapsed:before {
+  transform: rotate(45deg);
+}
+
+.faq-list__btn:hover {
+  color: #333;
+}
+
+.faq-list__btn span {
+  max-width: 410px;
+}
+
+.faq-list__content {
+  padding: 0 38px 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.faq-list__content .btn {
+  width: 100%;
+}
+
+.faq-list__content .btn__holder {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.faq-list__content .btn__ico {
+  width: calc( 0.03916 * 100vmin + 14.07229px);
+  height: calc( 0.03916 * 100vmin + 14.07229px);
+  line-height: calc( 0.03916 * 100vmin + 14.07229px);
+}
+
+.faq-list__content .icon-click {
+  width: calc( 0.00753 * 100vmin + 13.78313px);
+  height: calc( 0.00753 * 100vmin + 21.78313px);
+  fill: #fff;
+  filter: drop-shadow(0 1px 0 #675fd5);
 }
 
 .footer {
@@ -2014,6 +2196,40 @@ button {
   .steps h2 span {
     font-size: 36px;
     line-height: 50px;
+  }
+
+  .faq__manager {
+    margin-bottom: 0;
+  }
+
+  .faq__btn .btn {
+    width: 100%;
+  }
+
+  .faq__btn .btn__holder {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .faq-list__btn {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px 108px 20px 48px;
+  }
+
+  .faq-list__content {
+    padding: 0 48px 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .faq-list__content .btn {
+    width: auto;
+  }
+
+  .faq-list__content .btn__holder {
+    padding-left: 67px;
+    padding-right: 67px;
   }
 }
 
@@ -2122,6 +2338,18 @@ button {
 
   .calc .skewed__holder:before {
     height: 70%;
+  }
+
+  .faq__title {
+    text-align: left;
+  }
+
+  .faq__description {
+    margin: 0 0 80px 0;
+  }
+
+  .faq__manager {
+    margin-bottom: 48px;
   }
 }
 
