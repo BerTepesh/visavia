@@ -43,8 +43,8 @@ $(window).on('load resize', function() {
     infinite: false,
     autoplay: true,
     speed: 900,
-    prevArrow: '<button type="button" class="prev"></button>',
-    nextArrow: '<button type="button" class="next"></button>',
-    appendArrows: $(this).find('.slider__nav')
+    prevArrow: '<button type="button" class="prev"><div class="btn"><div class="btn__holder"><svg class="icon-arrow"><use xlink:href="img/svg/symbol/sprite.svg#arrow"></use></svg></div></div></button>',
+    nextArrow: '<button type="button" class="next"><div class="btn"><div class="btn__holder"><svg class="icon-arrow"><use xlink:href="img/svg/symbol/sprite.svg#arrow"></use></svg></div></div></button>',
+    appendArrows: $('.slider__nav')
   });
 });

@@ -2135,6 +2135,66 @@ button {
 }
 .slider {
   margin-bottom: 50px;
+  position: relative;
+  &__nav {
+    button {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20%;
+
+      margin: auto 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      @include bp($md) {
+        top: 0;
+        bottom: 0;
+      }
+      &.slick-disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+      .icon-arrow {
+        width: 41px;
+        height: 34px;
+        fill: #fff;
+      }
+      &.prev {
+        left: 0;
+        @include bp($xl) {
+          left: -35px;
+        }
+        .icon-arrow {
+          transform: rotate(180deg);
+        }
+      }
+      &.next {
+        right: 0;
+        @include bp($xl) {
+          right: -20px;
+        }
+      }
+      &:active {
+
+      }
+      .btn {
+        padding: 0;
+        width: 100%;
+        border-bottom-width: 6px;
+        &:active {
+          border-bottom-width: 0;
+          margin-top: 6px;
+        }
+      }
+      .btn__holder {
+        padding: 0;
+        width: 100%;
+        height: 75px;
+      }
+    }
+  }
 }
 .reviews {
   margin-bottom: 112px;
@@ -2147,6 +2207,24 @@ button {
     margin-bottom: 25px;
     color: #59586e;
   }
+  &__wrap {
+
+    @include bp($xl) {
+      padding: 0 100px;
+    }
+  }
+  &__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    right: 75px;
+    margin: 0 auto;
+    height: 76px;
+    max-width: 1050px;
+    opacity: .2;
+    box-shadow: 0 7px 50px 0 #554dd9;
+    z-index: -1;
+  }
   &__holder {
     position: relative;
     background: #fff;
@@ -2154,6 +2232,9 @@ button {
     border-radius: 0 0 20px 20px;
     padding: 32px 32px 32px 32px;
     @include bp($md) {
+      padding: 32px 32px 32px 84px;
+    }
+    @include bp($xl) {
       padding: 32px 32px 32px 64px;
     }
     &:before {
@@ -2217,6 +2298,11 @@ button {
     font-weight: 600;
     color: #59586e;
   }
+}
+.find-us {
+  min-height: 300px;
+  background: url(../img/find-us/back.png);
+  background-position: center bottom;
 }
 .footer {
   flex: 0 0 auto;

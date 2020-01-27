@@ -754,68 +754,71 @@ include template/head.pug
           <div class="title">
             <h2>Отзывы наших клиентов</h2>
           </div>
-          <div class="slider">
-            <div class="reviews__holder slider__holder">
-              <div class="reviews__item">
-                <div class="row justify-content-between">
-                  <div class="col-md-6 order-2 order-md-1">
-                    <div class="reviews__content">
-                      +icon('quote')
-                      <h3>Спасибо, что быстро.</h3>
-                      <p>Документы приняли без проблем и очередей  всего за 10 минут.</p>
-                      <p>Все объяснили и рассказали. Уже через пять  дней получила свой паспорт и визу.  Какая я счастливая, ура, завтра лечу в Индию.</p>
-                      <a href="#" class="reviews__read-more">Читать полностью</a>
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                          <div class="reviews__flag">
-                            <img src="img/reviews/flags/1.png" alt="">
+          <div class="reviews__wrap">
+            <div class="slider">
+              <div class="reviews__holder slider__holder">
+                <div class="reviews__item">
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 order-2 order-md-1">
+                      <div class="reviews__content">
+                        +icon('quote')
+                        <h3>Спасибо, что быстро.</h3>
+                        <p>Документы приняли без проблем и очередей  всего за 10 минут.</p>
+                        <p>Все объяснили и рассказали. Уже через пять  дней получила свой паспорт и визу.  Какая я счастливая, ура, завтра лечу в Индию.</p>
+                        <a href="#" class="reviews__read-more">Читать полностью</a>
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <div class="reviews__flag">
+                              <img src="img/reviews/flags/1.png" alt="">
+                            </div>
                           </div>
-                        </div>
-                        <div class="col">
-                          <div class="reviews__name">Марина Борисова</div>
-                          <div class="reviews__country">Индия</div>
+                          <div class="col">
+                            <div class="reviews__name">Марина Борисова</div>
+                            <div class="reviews__country">Индия</div>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="col-md-5 order-1 order-md-2">
+                      <div class="reviews__photo">
+                        <img src="img/reviews/1.jpg" alt="">
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-5 order-1 order-md-2">
-                    <div class="reviews__photo">
-                      <img src="img/reviews/1.jpg" alt="">
+                </div>
+                <div class="reviews__item">
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 order-2 order-md-1">
+                      <div class="reviews__content">
+                        +icon('quote')
+                        <h3>Спасибо, что быстро.</h3>
+                        <p>Документы приняли без проблем и очередей  всего за 10 минут.</p>
+                        <p>Все объяснили и рассказали. Уже через пять  дней получила свой паспорт и визу.  Какая я счастливая, ура, завтра лечу в Индию.</p>
+                        <a href="#" class="reviews__read-more">Читать полностью</a>
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <div class="reviews__flag">
+                              <img src="img/reviews/flags/1.png" alt="">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="reviews__name">Марина Борисова</div>
+                            <div class="reviews__country">Индия</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5 order-1 order-md-2">
+                      <div class="reviews__photo">
+                        <img src="img/reviews/1.jpg" alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="reviews__item">
-                <div class="row justify-content-between">
-                  <div class="col-md-6 order-2 order-md-1">
-                    <div class="reviews__content">
-                      +icon('quote')
-                      <h3>Спасибо, что быстро.</h3>
-                      <p>Документы приняли без проблем и очередей  всего за 10 минут.</p>
-                      <p>Все объяснили и рассказали. Уже через пять  дней получила свой паспорт и визу.  Какая я счастливая, ура, завтра лечу в Индию.</p>
-                      <a href="#" class="reviews__read-more">Читать полностью</a>
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                          <div class="reviews__flag">
-                            <img src="img/reviews/flags/1.png" alt="">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="reviews__name">Марина Борисова</div>
-                          <div class="reviews__country">Индия</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5 order-1 order-md-2">
-                    <div class="reviews__photo">
-                      <img src="img/reviews/1.jpg" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="slider__nav"></div>
+              <div class="reviews__shadow"></div>
             </div>
-            <div class="slider__nav"></div>
           </div>
           <div class="text-center">
             <a href="#" class="btn">
@@ -826,6 +829,15 @@ include template/head.pug
                 </div>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
+      <section class="anim-section find-us">
+        <div class="container-fluid">
+          <div class="find-us__holder">
+            <div class="title">
+              <h2>Как нас найти</h2>
+            </div>
           </div>
         </div>
       </section>
