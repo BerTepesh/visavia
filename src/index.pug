@@ -125,6 +125,10 @@ include template/head.pug
             <img src="img/reasons/1.png" alt="">
           </div>
           <div class="reasons__shadow"></div>
+          <div class="reasons__illustr">
+            <img src="img/reasons/2.png" alt="">
+            <img src="img/reasons/3.png" alt="">
+          </div>
         </div>
       </section>
       <section class="which anim-section">
@@ -231,7 +235,7 @@ include template/head.pug
                     <div class="consult-form__subtitle">Наш специалист позвонит вам в течение  30 минут и проконсультирует бесплатно</div>
                     <input type="text" class="input consult-form__input" placeholder="Как Вас зовут ?">
                     <input type="text" class="input consult-form__input" placeholder="Введите свой номер телефон">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" data-toggle="modal" data-target="#consult">
                       <div class="btn__holder">
                         <div class="btn__text">Получить <br> консультацию</div>
                         <div class="btn__ico">
@@ -248,6 +252,11 @@ include template/head.pug
               </div>
             </div>
           </div>
+        </div>
+        <div class="which__illustr">
+          <img src="img/which/3.png" alt="">
+          <img src="img/which/4.png" alt="">
+          <img src="img/which/5.png" alt="">
         </div>
       </section>
       <section class="anim-section difficulties">
@@ -320,6 +329,10 @@ include template/head.pug
             </div>
           </div>
         </div>
+        <div class="difficulties__illustr">
+          <img src="img/difficulties/2.png" alt="">
+          <img src="img/difficulties/3.png" alt="">
+        </div>
       </section>
       <section class="anim-section steps">
         <div class="container-fluid">
@@ -379,6 +392,11 @@ include template/head.pug
               </div>
             </div>
           </div>
+        </div>
+        <div class="steps__illustr">
+          <img src="img/steps/2.png" alt="">
+          <img src="img/steps/3.png" alt="">
+          <img src="img/steps/4.png" alt="">
         </div>
       </section>
       <section class="visa-type">
@@ -556,6 +574,11 @@ include template/head.pug
             </div>
           </div>
         </div>
+        <div class="visa-type__illustr">
+          <img src="img/visa-type/1.png" alt="">
+          <img src="img/visa-type/2.png" alt="">
+          <img src="img/visa-type/3.png" alt="">
+        </div>
       </section>
       <section class="anim-section calc">
         <div class="container-fluid">
@@ -644,6 +667,12 @@ include template/head.pug
             </div>
             <div class="skewed__shadow"></div>
           </div>
+        </div>
+        <div class="calc__illustr">
+          <img src="img/reasons/3.png" alt="">
+          <img src="img/calc/1.png" alt="">
+          <img src="img/calc/2.png" alt="">
+          <img src="img/calc/3.png" alt="">
         </div>
       </section>
       <section class="anim-section faq">
@@ -819,6 +848,12 @@ include template/head.pug
               <div class="slider__nav"></div>
               <div class="reviews__shadow"></div>
             </div>
+            <div class="reviews__illustr">
+              <img src="img/reviews/2.png" alt="">
+              <img src="img/reviews/3.png" alt="">
+              <img src="img/reviews/4.png" alt="">
+              <img src="img/reviews/5.png" alt="">
+            </div>
           </div>
           <div class="text-center">
             <a href="#" class="btn">
@@ -834,10 +869,10 @@ include template/head.pug
       </section>
       <section class="anim-section find-us">
         <div class="container-fluid">
+          <div class="title">
+            <h2>Как нас найти</h2>
+          </div>
           <div class="find-us__holder">
-            <div class="title">
-              <h2>Как нас найти</h2>
-            </div>
             <div class="row justify-centent-center justify-centent-md-between">
               <div class="col-md mb-5 mb-md-0">
                 <div class="find-us__content">
@@ -852,7 +887,7 @@ include template/head.pug
                   </ul>
                 </div>
               </div>
-              <div class="col text-center text-md-left">
+              <div class="col text-center text-md-right">
                 <div class="find-us__form">
                   <div class="caption caption_white caption_footered">
                     <div class="caption__holder">
@@ -884,6 +919,13 @@ include template/head.pug
               </div>
             </div>
           </div>
+        </div>
+        <div class="find-us__marker">
+          <img src="img/find-us/3.png" alt="">
+        </div>
+        <div class="find-us__illustr">
+          <img src="img/find-us/1.png" alt="">
+          <img src="img/find-us/2.png" alt="">
         </div>
       </section>
     </main>
@@ -924,4 +966,3 @@ include template/head.pug
   include template/scripts.pug
 </body>
 </html>
-

@@ -353,6 +353,7 @@ button {
 }
 .content {
   flex: 1 0 auto;
+  overflow: hidden;
 }
 .container-fluid {
   max-width: 1200px;
@@ -1258,7 +1259,7 @@ button {
 .reasons {
   padding-bottom: 100px;
   position: relative;
-  padding-top: 30px;
+  padding-top: 70px;
   z-index: 1;
   overflow: hidden;
   h2 {
@@ -1326,9 +1327,47 @@ button {
     box-shadow: 0 7px 50px 0 #554dd9;
     z-index: -1;
   }
+  &__illustr {
+    position: absolute;
+    max-width: 1050px;
+    top: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    img {
+      position: absolute;
+      display: none;
+      transition: 1s;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: 10px;
+        left: 10px;
+      }
+      &:last-of-type {
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+  &.active &__illustr {
+    img {
+      &:first-of-type {
+        top: -80px;
+        left: -380px;
+      }
+      &:last-of-type {
+        right: -410px;
+        top: -30px;
+      }
+    }
+  }
 }
 .which {
   margin-bottom: 117px;
+  position: relative;
   &__title {
     position: relative;
     margin-top: -30px;
@@ -1395,6 +1434,33 @@ button {
   &__item {
     margin-bottom: 30px;
   }
+  &__illustr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    img {
+      position: absolute;
+      display: none;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: 250px;
+        left: -120px;
+      }
+      &:nth-of-type(2) {
+        right: -210px;
+        top: 320px;
+      }
+      &:last-of-type {
+        right: 0;
+        bottom: -290px;
+      }
+    }
+  }
 }
 .visa-direction {
   position: relative;
@@ -1455,7 +1521,7 @@ button {
     width: 100%;
     max-height: 121px;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    transition: max-height .8s cubic-bezier(0, 1, 0, 1);
     border-radius: 0 0 10px 10px;
   }
   &__content {
@@ -1667,9 +1733,32 @@ button {
       padding-right: 10%;
     }
   }
+  &__illustr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    img {
+      position: absolute;
+      display: none;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: -20px;
+        left: -70px;
+      }
+      &:last-of-type {
+        right: -55px;
+        top: 650px;
+      }
+    }
+  }
 }
 .steps {
-  margin-bottom: 100px;
+  position: relative;
   &__holder {
     position: relative;
     margin-bottom: 270px;
@@ -1738,7 +1827,7 @@ button {
       padding-top: 30px;
     }
     &__subtitle {
-      font-family: "Yeseva One", sans-serif;
+
     }
     .btn__text {
       font-size: 16px;
@@ -1776,10 +1865,58 @@ button {
       text-align: left;
     }
   }
+  &__illustr {
+    position: absolute;
+    max-width: 1050px;
+    top: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    img {
+      position: absolute;
+      display: none;
+      transition: 1s;
+      z-index: -1;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: -170px;
+        right: -1245px;
+        z-index: 2;
+      }
+      &:nth-of-type(2) {
+        top: 220px;
+        left: 10px;
+      }
+      &:last-of-type {
+        right: 10px;
+        top: 190px;
+      }
+    }
+  }
+  &.active &__illustr {
+    img {
+      &:first-of-type {
+        top: -170px;
+        right: -245px;
+      }
+      &:nth-of-type(2) {
+        top: 220px;
+        left: -250px;
+      }
+      &:last-of-type {
+        top: 190px;
+        right: -360px;
+      }
+    }
+  }
 }
 .visa-type {
   padding-bottom: 80px;
+  padding-top: 120px;
   overflow: hidden;
+  position: relative;
   &__title {
     h2 {
       max-width: 572px;
@@ -1843,6 +1980,33 @@ button {
       }
     }
   }
+  &__illustr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    img {
+      position: absolute;
+      display: none;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: -10px;
+        left: -120px;
+      }
+      &:nth-of-type(2) {
+        top: -40px;
+        right: -150px;
+      }
+      &:last-of-type {
+        right: -145px;
+        bottom: 0;
+      }
+    }
+  }
 }
 .travel-img {
   margin: 70px auto 0;
@@ -1895,7 +2059,9 @@ button {
   }
 }
 .calc {
-  margin-bottom: 100px;
+  padding-bottom: 150px;
+  position: relative;
+  padding-top: 180px;
   .skewed__top {
     background-image: url(../img/skewed2.png);
   }
@@ -1970,6 +2136,61 @@ button {
         background: linear-gradient(0deg, rgba(255, 230, 140, 1) 0%, rgba(255, 230, 140, 0) 100%);
         left: 0;
         right: 0;
+      }
+    }
+  }
+  &__illustr {
+    position: absolute;
+    max-width: 1050px;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    img {
+      position: absolute;
+      display: none;
+      transition: left 1s, right 1s, top 1s, bottom 1s;
+      z-index: -1;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: 200px;
+        left: 10px;
+        transform: rotate(-75deg);
+      }
+      &:nth-of-type(2) {
+        top: 180px;
+        right: 10px;
+      }
+      &:nth-of-type(3) {
+        bottom: 190px;
+        left: 10px;
+      }
+      &:last-of-type {
+        bottom: 140px;
+        right: 10px;
+      }
+    }
+  }
+  &.active &__illustr {
+    img {
+      &:first-of-type {
+        top: -10px;
+        left: -295px;
+      }
+      &:nth-of-type(2) {
+        top: -30px;
+        right: -180px;
+      }
+      &:nth-of-type(3) {
+        bottom: 190px;
+        left: -320px;
+      }
+      &:last-of-type {
+        bottom: 10px;
+        right: -310px;
       }
     }
   }
@@ -2183,14 +2404,13 @@ button {
       border-radius: 50%;
       position: absolute;
       top: 20%;
-
       margin: auto 0;
       padding: 0;
       border: none;
       background: transparent;
       @include bp($md) {
         top: 0;
-        bottom: 0;
+        bottom: 40px;
       }
       &.slick-disabled {
         opacity: .5;
@@ -2248,6 +2468,7 @@ button {
     color: #59586e;
   }
   &__wrap {
+    position: relative;
     @include bp($xl) {
       padding: 0 100px;
     }
@@ -2337,6 +2558,62 @@ button {
     font-weight: 600;
     color: #59586e;
   }
+  &__illustr {
+    position: absolute;
+    max-width: 1050px;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 100%;
+    img {
+      position: absolute;
+      display: none;
+      transition: 1s;
+      z-index: -1;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        top: 50px;
+        left: 30px;
+      }
+      &:nth-of-type(2) {
+        top: -270px;
+        right: -180px;
+        transform: rotate(-15deg);
+        z-index: 2;
+      }
+      &:nth-of-type(3) {
+        bottom: 30px;
+        left: 30px;
+      }
+      &:last-of-type {
+        bottom: 30px;
+        right: 30px;
+      }
+    }
+  }
+  &.active &__illustr {
+    img {
+      &:first-of-type {
+        top: -250px;
+        left: -270px;
+      }
+      &:nth-of-type(2) {
+        transform: rotate(0deg);
+      }
+      &:nth-of-type(3) {
+        bottom: -130px;
+        left: -80px;
+      }
+      &:last-of-type {
+        bottom: -120px;
+        right: -100px;
+      }
+    }
+  }
 }
 .socials {
   list-style: none;
@@ -2371,6 +2648,10 @@ button {
   position: relative;
   @include bp($xl) {
     background-size: cover;
+  }
+  .title {
+    position: relative;
+    z-index: 2;
   }
   &:before {
     content: '';
@@ -2428,9 +2709,90 @@ button {
       }
     }
   }
+  &__marker {
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+    right: 100px;
+    margin: 0 auto;
+    width: 270px;
+    height: 411px;
+    overflow: hidden;
+    img {
+      bottom: -411px;
+      left: 0;
+      position: absolute;
+      display: none;
+      transition: left 1s, right 1s, top 1s, bottom 1s;
+      z-index: 1;
+      @include bp($lg) {
+        display: block;
+      }
+    }
+  }
+  &.active &__marker {
+    img {
+      bottom: 0;
+    }
+  }
+  &__illustr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    img {
+      position: absolute;
+      display: none;
+      transition: left 1s, right 1s, top 1s, bottom 1s;
+      z-index: 1;
+      @include bp(1480px) {
+        display: block;
+      }
+      &:first-of-type {
+        bottom: -1024px;
+        left: -495px;
+      }
+      &:last-of-type {
+        bottom: -1024px;
+        right: -510px;
+      }
+    }
+  }
+  &.active &__illustr {
+    img {
+      &:first-of-type {
+        bottom: -400px;
+        left: -160px;
+      }
+      &:last-of-type {
+        bottom: -700px;
+        right: -410px;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  background-color: #f0f0f0;
 }
 .modal {
   padding-right: 0 !important;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(at center center, #c1bdf5 0%, rgba(197, 194, 246, .92) 34%, rgba(212, 209, 255, .77) 45%, rgba(213, 210, 255, .76) 54%, rgba(255, 255, 255, .45) 100%);
+  }
+}
+.modal-dialog {
+
 }
 .modal-body {
   padding-left: 0;
