@@ -620,11 +620,8 @@ button {
     text-align: center;
   }
   &_footered {
-    padding-bottom: 0;
-    border-radius: 0;
-  }
-  &_footered {
     padding-bottom: 30px;
+    border-radius: 0;
   }
   &_clouded {
     &:before,
@@ -684,6 +681,13 @@ button {
     width: 100%;
     border-radius: 0 0 10px 10px;
   }
+  &_white {
+    padding-bottom: 82px;
+  }
+  &_white &__holder {
+    background: #fff;
+    border-radius: 0 0 40px 40px;
+  }
   &_footered &__holder {
     padding-bottom: 0;
     border-radius: 0;
@@ -713,7 +717,22 @@ button {
       border-radius: 10px 10px 0 0;
     }
   }
+  &_white &__top {
+    background: url(../img/pattern3.png);
+    &:before,
+    &:after {
+      background: #fff;
+    }
+    &:before {
+      border-radius: 40px 40px 0 0;
+    }
+    &:after {
+      border-radius: 40px 40px 0 0;
+    }
+  }
   &__content {
+    position: relative;
+    z-index: 2;
     b {
       display: block;
       text-align: center;
@@ -729,6 +748,9 @@ button {
         margin-bottom: 15px;
       }
     }
+  }
+  &_white &__content {
+    margin-bottom: -25px;
   }
   &__bottom {
     position: absolute;
@@ -751,6 +773,24 @@ button {
     }
     &:after {
       right: -30px;
+    }
+  }
+  &_white &__bottom {
+    background: #fff;
+    height: 82px;
+    left: 75px;
+    right: 75px;
+    &:before,
+    &:after {
+      width: 75px;
+      height: 82px;
+      background: url(../img/angle2.png) no-repeat;
+    }
+    &:before {
+      left: -75px;
+    }
+    &:after {
+      right: -75px;
     }
   }
 }
@@ -2197,7 +2237,7 @@ button {
   }
 }
 .reviews {
-  margin-bottom: 112px;
+  margin-bottom: 70px;
   h3 {
     font: 600 24px/26px 'Montserrat', sans-serif;
     color: #59586e;
@@ -2208,7 +2248,6 @@ button {
     color: #59586e;
   }
   &__wrap {
-
     @include bp($xl) {
       padding: 0 100px;
     }
@@ -2299,13 +2338,152 @@ button {
     color: #59586e;
   }
 }
-.find-us {
-  min-height: 300px;
-  background: url(../img/find-us/back.png);
-  background-position: center bottom;
+.socials {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  li {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    margin-right: 15px;
+    a {
+      background-size: cover;
+      display: block;
+      line-height: 50px;
+    }
+  }
+  &__vk {
+    a {
+      background: url(../img/socials/vk.png) no-repeat;
+    }
+  }
+  &__ig {
+    a {
+      background: url(../img/socials/ig.png) no-repeat;
+    }
+  }
 }
-.footer {
-  flex: 0 0 auto;
+.find-us {
+  padding: 30px 0 125px 0;
+  background: url(../img/find-us/back.png) no-repeat;
+  background-position: center bottom;
+  position: relative;
+  @include bp($xl) {
+    background-size: cover;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(242,244,252,1) 0%, rgba(242,244,252,0) 100%);
+  }
+  &__holder {
+    position: relative;
+    z-index: 2;
+    @include bp($lg) {
+      padding: 0 0 0 100px;
+    }
+  }
+  &__content {
+    padding-top: 30px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #59586e;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+    color: #59586e;
+    margin-bottom: 32px;
+    span {
+      display: block;
+    }
+  }
+  &__phone {
+    font-size: 24px;
+    line-height: 28px;
+    color: #59586e;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+  &__form {
+    max-width: 450px;
+    display: inline-block;
+    vertical-align: top;
+    .caption__holder {
+      padding-left: 20px;
+      padding-right: 20px;
+      @include bp($sm) {
+        padding-left: 43px;
+        padding-right: 43px;
+      }
+    }
+  }
+}
+.modal {
+  padding-right: 0 !important;
+}
+.modal-body {
+  padding-left: 0;
+  padding-right: 0;
+  .consult-form {
+    padding-top: 20px;
+  }
+  .caption__holder {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include bp($sm) {
+      padding-left: 43px;
+      padding-right: 43px;
+    }
+  }
+  .close {
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: 8px;
+    @include bp($sm) {
+      right: -15px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background: #272641;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    &:before {
+      width: 20px;
+      height: 2px;
+      margin: auto 0;
+    }
+    &:after {
+      width: 2px;
+      height: 20px;
+      margin: 0 auto;
+    }
+  }
+  .custom-control {
+    padding-left: 20px;
+    @include bp($sm) {
+      padding-left: 0;
+    }
+  }
 }
 @keyframes mouse-scroll {
   from {

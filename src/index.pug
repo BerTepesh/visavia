@@ -22,7 +22,7 @@ include template/head.pug
                   <div class="preface__subtitle"><span></span><span>Выдали 12.000 виз <br> за 8 лет работы </span></div>
                   <div class="preface__consult">
                     <p><span>Получите консультацию  визового эксперта бесплатно</span></p>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" data-toggle="modal" data-target="#consult">
                       <div class="btn__holder">
                         <div class="btn__text">Получить <br> консультацию</div>
                         <div class="btn__ico">
@@ -838,11 +838,88 @@ include template/head.pug
             <div class="title">
               <h2>Как нас найти</h2>
             </div>
+            <div class="row justify-centent-center justify-centent-md-between">
+              <div class="col-md mb-5 mb-md-0">
+                <div class="find-us__content">
+                  <div class="find-us__subtitle">Адрес:</div>
+                  <div class="find-us__text"><span>г. Иваново,</span> <span>пл. Революции, д.7, оф. 210Б</span></div>
+                  <div class="find-us__subtitle">Режим работы: </div>
+                  <div class="find-us__text"><span>Пн.-пт.  9:00 - 19:00 Сб.</span><span>10:00 - 16:00</span></div>
+                  <div class="find-us__phone">8(4932)77-36-22</div>
+                  <ul class="socials">
+                    <li class="socials__vk"><a href="#">&nbsp;</a></li>
+                    <li class="socials__ig"><a href="#">&nbsp;</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col text-center text-md-left">
+                <div class="find-us__form">
+                  <div class="caption caption_white caption_footered">
+                    <div class="caption__holder">
+                      <div class="caption__top"></div>
+                      <div class="caption__content">
+                        <form class="consult-form">
+                          <div class="consult-form__title">Получите консультацию  визового эксперта бесплатно</div>
+                          <div class="consult-form__subtitle">Наш специалист позвонит вам в течение  30 минут и проконсультирует бесплатно</div>
+                          <input type="text" class="input consult-form__input" placeholder="Как Вас зовут ?">
+                          <input type="text" class="input consult-form__input" placeholder="Введите свой номер телефон">
+                          <a href="#" class="btn">
+                            <div class="btn__holder">
+                              <div class="btn__text">Получить <br> консультацию</div>
+                              <div class="btn__ico">
+                                +icon('phone')
+                              </div>
+                            </div>
+                          </a>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Я даю свое согласие на обработку  персональных данных и соглашаюсь  <a href="#">с&nbsp;политикой конфиденциальности</a> </label>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="caption__bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    include template/footer.pug
+    <div class="modal fade modal-consult" id="consult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-body">
+          <div class="caption caption_white caption_footered">
+            <div class="caption__holder">
+              <div class="caption__top"></div>
+              <div class="caption__content">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <form class="consult-form">
+                  <div class="consult-form__title">Получите консультацию  визового эксперта бесплатно</div>
+                  <div class="consult-form__subtitle">Наш специалист позвонит вам в течение  30 минут и проконсультирует бесплатно</div>
+                  <input type="text" class="input consult-form__input" placeholder="Как Вас зовут ?">
+                  <input type="text" class="input consult-form__input" placeholder="Введите свой номер телефон">
+                  <a href="#" class="btn">
+                    <div class="btn__holder">
+                      <div class="btn__text">Получить <br> консультацию</div>
+                      <div class="btn__ico">
+                        +icon('phone')
+                      </div>
+                    </div>
+                  </a>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">Я даю свое согласие на обработку  персональных данных и соглашаюсь  <a href="#">с&nbsp;политикой конфиденциальности</a> </label>
+                  </div>
+                </form>
+              </div>
+              <div class="caption__bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   include template/scripts.pug
 </body>
