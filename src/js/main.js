@@ -33,3 +33,18 @@ $(".amount__btn").click(function(){
     num.val(parseInt(num.val()) + 1);
   }
 });
+$(window).on('load resize', function() {
+  $(".slider__holder").slick({
+    arrows: true,
+    dots: false,
+    slidesToShow: 1,
+    swipeToSlide: true,
+    accessibility: false,
+    infinite: false,
+    autoplay: true,
+    speed: 900,
+    prevArrow: '<button type="button" class="prev"></button>',
+    nextArrow: '<button type="button" class="next"></button>',
+    appendArrows: $(this).find('.slider__nav')
+  });
+});
