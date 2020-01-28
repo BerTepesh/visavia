@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 [class^='icon-'],
 [class*=' icon-'] {
   display: inline-block;
@@ -115,6 +117,32 @@ h3 {
 
 .title h2 span {
   color: #59586e;
+}
+
+.read-more {
+  margin-bottom: 40px;
+}
+
+.read-more .collapse:not(.show) {
+  height: 230px !important;
+  overflow: hidden;
+  display: block;
+}
+
+.read-more a {
+  display: none;
+}
+
+.read-more a.collapsed {
+  content: 'Читать полностью';
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: 1px dashed;
+  color: #272641;
+}
+
+.read-more a.collapsed:hover {
+  color: #272641;
 }
 
 .nav-tabs {
@@ -435,9 +463,8 @@ button {
 
 .header__phone b {
   display: block;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .header__phone a {
@@ -445,6 +472,7 @@ button {
   vertical-align: top;
   border-bottom: 1px dashed;
   color: #272641;
+  font-size: 14px;
 }
 
 .consult-form {
@@ -512,6 +540,11 @@ button {
 .logo {
   display: inline-block;
   vertical-align: top;
+  line-height: 1px;
+}
+
+.logo img {
+  max-width: 100%;
 }
 
 .amount {
@@ -553,6 +586,7 @@ button {
   border: none;
   width: 30px;
   text-align: center;
+  -moz-appearance: textfield;
 }
 
 .amount__number::-webkit-outer-spin-button,
@@ -968,7 +1002,7 @@ button {
 .preface {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
-  background-position: bottom left;
+  background-position: bottom center;
   padding: 0 0 200px 0;
   position: relative;
   overflow: hidden;
@@ -1138,7 +1172,7 @@ button {
 }
 
 .postface {
-  margin: -120px 0 90px 0;
+  margin: -120px 0 10px 0;
 }
 
 .postface__holder {
@@ -1375,7 +1409,7 @@ button {
 }
 
 .which {
-  margin-bottom: 117px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -1724,7 +1758,7 @@ button {
   position: absolute;
   bottom: -2px;
   left: 0;
-  height: 300px;
+  height: 10px;
   right: 0;
   background: linear-gradient(180deg, rgba(242, 244, 252, 0) 0%, #f2f4fc 100%);
   z-index: 2;
@@ -1733,6 +1767,7 @@ button {
 .difficulties__img img {
   max-width: 100%;
   position: relative;
+  bottom: 2px;
 }
 
 .difficulties__caption {
@@ -1772,6 +1807,11 @@ button {
 
 .steps {
   position: relative;
+}
+
+.steps__wrap {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .steps__holder {
@@ -1896,6 +1936,17 @@ button {
   position: relative;
 }
 
+.visa-type:before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, #f2f4fc 0%, rgba(242, 244, 252, 0) 100%);
+}
+
 .visa-type__title h2 {
   max-width: 572px;
 }
@@ -1937,6 +1988,8 @@ button {
 
 .visa-type__text p {
   margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .visa-type__btn {
@@ -1948,6 +2001,11 @@ button {
 
 .visa-type__btn .btn {
   width: 100%;
+}
+
+.visa-type__btn .btn__holder {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .visa-type__btn .btn__ico {
@@ -2042,9 +2100,9 @@ button {
 }
 
 .calc {
-  padding-bottom: 150px;
   position: relative;
-  padding-top: 180px;
+  padding-top: 0;
+  margin-bottom: 60px;
 }
 
 .calc .skewed__top {
@@ -2090,6 +2148,7 @@ button {
   width: calc( 0.0241 * 100vmin + 32.50602px);
   height: calc( 0.0241 * 100vmin + 32.50602px);
   line-height: calc( 0.0241 * 100vmin + 32.50602px);
+  margin-left: 10px;
 }
 
 .calc__btn .btn .icon-click {
@@ -2216,7 +2275,7 @@ button {
 }
 
 .faq__title {
-  margin-bottom: 113px;
+  margin-bottom: 60px;
 }
 
 .faq__description {
@@ -2225,7 +2284,7 @@ button {
   position: relative;
   max-width: 296px;
   color: #6d6d6d;
-  margin: 0 auto 80px;
+  margin: 0 auto 40px;
 }
 
 .faq__description .icon-qst {
@@ -2277,6 +2336,11 @@ button {
   display: block;
 }
 
+.faq__btn .btn__holder {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .faq__btn .btn__ico {
   width: calc( 0.0241 * 100vmin + 32.50602px);
   height: calc( 0.0241 * 100vmin + 32.50602px);
@@ -2304,13 +2368,12 @@ button {
 }
 
 .faq-list__btn {
-  min-height: 114px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   cursor: pointer;
-  padding: 20px 108px 20px 38px;
+  padding: 15px 60px 15px 20px;
   font-size: 16px;
   line-height: 22px;
   color: #333;
@@ -2320,9 +2383,9 @@ button {
 .faq-list__btn:before {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 40px;
+  width: 14px;
+  height: 14px;
+  right: 25px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -2345,7 +2408,7 @@ button {
 }
 
 .faq-list__content {
-  padding: 0 38px 20px;
+  padding: 0 18px 20px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -2375,6 +2438,7 @@ button {
 .slider {
   margin-bottom: 50px;
   position: relative;
+  z-index: 2;
 }
 
 .slider__nav button {
@@ -2446,6 +2510,8 @@ button {
 
 .reviews__wrap {
   position: relative;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .reviews__shadow {
@@ -2498,18 +2564,6 @@ button {
   height: 64px;
   fill: #d7d4ec;
   margin-bottom: 24px;
-}
-
-.reviews__read-more {
-  display: inline-block;
-  vertical-align: top;
-  border-bottom: 1px dashed;
-  color: #272641;
-  margin-bottom: 40px;
-}
-
-.reviews__read-more:hover {
-  color: #272641;
 }
 
 .reviews__flag {
@@ -2591,6 +2645,24 @@ button {
   right: -100px;
 }
 
+.reviews .btn__holder {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.reviews .btn__ico {
+  width: calc( 0.0241 * 100vmin + 32.50602px);
+  height: calc( 0.0241 * 100vmin + 32.50602px);
+  line-height: calc( 0.0241 * 100vmin + 32.50602px);
+}
+
+.reviews .icon-click {
+  width: calc( 0.00753 * 100vmin + 13.78313px);
+  height: calc( 0.00753 * 100vmin + 21.78313px);
+  fill: #fff;
+  filter: drop-shadow(0 1px 0 #675fd5);
+}
+
 .socials {
   list-style: none;
   padding-left: 0;
@@ -2623,7 +2695,11 @@ button {
   padding: 30px 0 125px 0;
   background: url(../img/find-us/back.png) no-repeat;
   background-position: center bottom;
+  background-size: cover;
   position: relative;
+  /*@include bp($xl) {
+    background-size: cover;
+  }*/
 }
 
 .find-us .title {
@@ -2836,14 +2912,18 @@ button {
         flex: 50%;
   }
 
-  .nav-tabs a {
-    font-size: 20px;
-    line-height: 24px;
-    padding: 20px 10px;
-  }
-
   .header {
     padding: 30px 0;
+  }
+
+  .header__phone b {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+
+  .header__phone a {
+    font-size: 18px;
   }
 
   .skewed__top {
@@ -2864,20 +2944,20 @@ button {
   }
 
   .preface__wrap:before {
-    margin-left: 30px;
+    margin-left: -20px;
     display: block;
   }
 
   .preface h1 {
     text-align: left;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
     margin-bottom: 25px;
   }
 
   .preface h1 span {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .preface__subtitle {
@@ -2903,6 +2983,10 @@ button {
     text-align: left;
   }
 
+  .difficulties__img {
+    bottom: 0;
+  }
+
   .steps__holder {
     margin-bottom: 430px;
   }
@@ -2919,23 +3003,29 @@ button {
     line-height: 50px;
   }
 
+  .visa-type__text p {
+    font-size: 18px;
+  }
+
+  .calc__btn .btn__ico {
+    margin-left: 26px;
+  }
+
   .faq__manager {
     margin-bottom: 0;
   }
 
-  .faq__btn .btn {
-    width: 100%;
-  }
-
-  .faq__btn .btn__holder {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .faq-list__btn {
+    min-height: 114px;
     font-size: 20px;
     line-height: 28px;
     padding: 20px 108px 20px 48px;
+  }
+
+  .faq-list__btn:before {
+    width: 20px;
+    height: 20px;
+    right: 40px;
   }
 
   .faq-list__content {
@@ -2953,9 +3043,30 @@ button {
     padding-right: 67px;
   }
 
+  .slider__nav button.prev {
+    left: -37px;
+  }
+
+  .slider__nav button.next {
+    right: -37px;
+  }
+
+  .reviews__wrap {
+    padding: 0 60px;
+  }
+
+  .reviews .btn__holder {
+    padding-left: 63px;
+    padding-right: 63px;
+  }
+
   .find-us__form .caption__holder {
     padding-left: 43px;
     padding-right: 43px;
+  }
+
+  .find-us__marker img {
+    display: block;
   }
 
   .modal-body .caption__holder {
@@ -2976,9 +3087,9 @@ button {
   h2,
   .h2,
   h3 {
-    font-size: 36px;
-    line-height: 50px;
-    margin-bottom: 64px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 60px;
   }
 
   h2 span,
@@ -3052,13 +3163,34 @@ button {
 
   .difficulties__img {
     margin-left: -165px;
+    bottom: 9rem;
     width: 330px;
     height: 467px;
+  }
+
+  .steps__wrap {
+    max-width: 100%;
+  }
+
+  .steps__holder {
+    margin-bottom: 0;
+  }
+
+  .steps__holder:before {
+    margin-left: -210px;
+    width: 260px;
+    height: 315px;
+    bottom: 0;
   }
 
   .steps h2 {
     margin-bottom: 80px;
     text-align: left;
+  }
+
+  .steps h2 span {
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .steps .consult-form {
@@ -3080,6 +3212,7 @@ button {
   }
 
   .faq__title {
+    margin-bottom: 113px;
     text-align: left;
   }
 
@@ -3096,6 +3229,10 @@ button {
     bottom: 40px;
   }
 
+  .reviews__wrap {
+    max-width: 100%;
+  }
+
   .reviews__holder {
     padding: 32px 32px 32px 84px;
   }
@@ -3107,12 +3244,7 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .nav-tabs {
-    margin: 0 -2% 64px;
-  }
-
   .nav-tabs__item {
-    padding: 0 2%;
     -ms-flex: 1;
         flex: 1;
   }
@@ -3126,6 +3258,10 @@ button {
     width: 65vw;
     height: calc(65vw / 1.7373);
     margin-left: -35vw;
+  }
+
+  .postface {
+    margin: -120px 0 50px 0;
   }
 
   .postface__holder {
@@ -3157,14 +3293,14 @@ button {
     min-height: 455px;
   }
 
-  .steps__holder {
-    margin-bottom: 0;
+  .difficulties__img {
+    bottom: 0;
   }
 
   .steps__holder:before {
-    margin-left: -310px;
-    width: 500px;
-    height: 607px;
+    margin-left: -280px;
+    width: 400px;
+    height: 485px;
     bottom: 0;
   }
 
@@ -3180,15 +3316,25 @@ button {
 }
 
 @media (min-width: 1150px) {
+  .nav-tabs {
+    margin: 0 -2% 64px;
+  }
+
+  .nav-tabs__item {
+    padding: 0 2%;
+  }
+
+  .nav-tabs a {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px 10px;
+  }
+
   .caption__cloud {
     margin-left: -400px;
     width: 721px;
     height: 415px;
     top: -150px;
-  }
-
-  .preface {
-    background-position: bottom center;
   }
 
   .which__title:before,
@@ -3202,12 +3348,20 @@ button {
     margin-left: -250px;
   }
 
-  .find-us__holder {
-    padding: 0 0 0 100px;
+  .steps__holder:before {
+    margin-left: -310px;
+    width: 500px;
+    height: 607px;
+    bottom: 0;
   }
 
-  .find-us__marker img {
-    display: block;
+  .faq__btn .btn__holder {
+    padding-left: 63px;
+    padding-right: 63px;
+  }
+
+  .find-us__holder {
+    padding: 0 0 0 100px;
   }
 }
 
@@ -3243,24 +3397,12 @@ button {
     padding-left: 30px;
   }
 
-  .slider__nav button.prev {
-    left: -35px;
-  }
-
-  .slider__nav button.next {
-    right: -20px;
-  }
-
   .reviews__wrap {
     padding: 0 100px;
   }
 
   .reviews__holder {
     padding: 32px 32px 32px 64px;
-  }
-
-  .find-us {
-    background-size: cover;
   }
 }
 
@@ -3334,8 +3476,16 @@ button {
 }
 
 @media (min-width: 1480px) {
+  .postface {
+    margin: -120px 0 90px 0;
+  }
+
   .reasons__illustr img {
     display: block;
+  }
+
+  .which {
+    margin-bottom: 117px;
   }
 
   .which__illustr img {
@@ -3352,6 +3502,11 @@ button {
 
   .visa-type__illustr img {
     display: block;
+  }
+
+  .calc {
+    padding-top: 180px;
+    padding-bottom: 150px;
   }
 
   .calc__illustr img {

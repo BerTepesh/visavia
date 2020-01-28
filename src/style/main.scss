@@ -46,9 +46,9 @@ h2,
   margin-bottom: 55px;
   text-align: center;
   @include bp($md) {
-    font-size: 36px;
-    line-height: 50px;
-    margin-bottom: 64px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 60px;
   }
   span {
     font: 18px/26px 'Montserrat', sans-serif;
@@ -78,13 +78,35 @@ h3 {
     }
   }
 }
+.read-more {
+  margin-bottom: 40px;
+}
+.read-more .collapse:not(.show) {
+  height: 230px !important;
+  overflow: hidden;
+  display: block;
+}
+
+.read-more a {
+  display: none;
+}
+.read-more a.collapsed  {
+  content: 'Читать полностью';
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: 1px dashed;
+  color: #272641;
+  &:hover {
+    color: #272641;
+  }
+}
 .nav-tabs {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 -10px 44px;
   border-bottom: none;
-  @include bp($ml) {
+  @include bp($lg) {
     margin: 0 -2% 64px;
   }
   &__item {
@@ -99,8 +121,10 @@ h3 {
       flex: 30%;
     }
     @include bp($ml) {
-      padding: 0 2%;
       flex: 1;
+    }
+    @include bp($lg) {
+      padding: 0 2%;
     }
   }
   a {
@@ -119,7 +143,7 @@ h3 {
     align-items: center;
     position: relative;
     background: #f2f4fc;
-    @include bp($sm) {
+    @include bp($lg) {
       font-size: 20px;
       line-height: 24px;
       padding: 20px 10px;
@@ -371,15 +395,23 @@ button {
   &__phone {
     b {
       display: block;
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 20px;
+      @include bp($sm) {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 5px;
+      }
     }
     a {
       display: inline-block;
       vertical-align: top;
       border-bottom: 1px dashed;
       color: #272641;
+      font-size: 14px;
+      @include bp($sm) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -440,6 +472,10 @@ button {
 .logo {
   display: inline-block;
   vertical-align: top;
+  line-height: 1px;
+  img {
+    max-width: 100%;
+  }
 }
 .amount {
   margin-bottom: 10px;
@@ -470,6 +506,7 @@ button {
     border: none;
     width: 30px;
     text-align: center;
+    -moz-appearance:textfield;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -870,13 +907,10 @@ button {
 .preface {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
-  background-position: bottom left;
+  background-position: bottom center;
   padding: 0 0 200px 0;
   position: relative;
   overflow: hidden;
-  @include bp($lg) {
-    background-position: bottom center;
-  }
   @include bp($xxl) {
     padding: 0 0 300px 0;
   }
@@ -903,7 +937,7 @@ button {
       height: 640px;
       display: none;
       @include bp($sm) {
-        margin-left: 30px;
+        margin-left: -20px;
         display: block;
       }
       @include bp($xl) {
@@ -923,8 +957,8 @@ button {
     margin-bottom: 20px;
     @include bp($sm) {
       text-align: left;
-      font-size: 48px;
-      line-height: 56px;
+      font-size: 40px;
+      line-height: 48px;
       margin-bottom: 25px;
     }
     @include bp($xxl) {
@@ -937,8 +971,8 @@ button {
       font: 24px/30px 'Montserrat', sans-serif;
       padding-top: 5px;
       @include bp($sm) {
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 28px;
+        line-height: 34px;
       }
       @include bp($xxl) {
         font-size: 36px;
@@ -1114,7 +1148,13 @@ button {
   }
 }
 .postface {
-  margin: -120px 0 90px 0;
+  margin: -120px 0 10px 0;
+  @include bp($ml) {
+    margin: -120px 0 50px 0;
+  }
+  @include bp(1480px) {
+    margin: -120px 0 90px 0;
+  }
   &__holder {
     padding-left: 10px;
     position: relative;
@@ -1366,8 +1406,11 @@ button {
   }
 }
 .which {
-  margin-bottom: 117px;
+  margin-bottom: 50px;
   position: relative;
+  @include bp(1480px) {
+    margin-bottom: 117px;
+  }
   &__title {
     position: relative;
     margin-top: -30px;
@@ -1704,7 +1747,7 @@ button {
       position: absolute;
       bottom: -2px;
       left: 0;
-      height: 300px;
+      height: 10px;
       right: 0;
       background: linear-gradient(180deg, rgba(242,244,252,0) 0%, rgba(242,244,252,1) 100%);
       z-index: 2;
@@ -1712,11 +1755,19 @@ button {
     img {
       max-width: 100%;
       position: relative;
+      bottom: 2px;
+    }
+    @include bp($sm) {
+      bottom: 0;
     }
     @include bp($md) {
       margin-left: -165px;
+      bottom: 9rem;
       width: 330px;
       height: 467px;
+    }
+    @include bp($ml) {
+      bottom: 0;
     }
     @include bp($lg) {
       width: 500px;
@@ -1759,13 +1810,20 @@ button {
 }
 .steps {
   position: relative;
+  &__wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    @include bp($md) {
+      max-width: 100%;
+    }
+  }
   &__holder {
     position: relative;
     margin-bottom: 270px;
     @include bp($sm) {
       margin-bottom: 430px;
     }
-    @include bp($ml) {
+    @include bp($md) {
       margin-bottom: 0;
     }
     &:before {
@@ -1785,7 +1843,19 @@ button {
         bottom: -430px;
         margin-left: -240px;
       }
+      @include bp($md) {
+        margin-left: -210px;
+        width: 260px;
+        height: 315px;
+        bottom: 0;
+      }
       @include bp($ml) {
+        margin-left: -280px;
+        width: 400px;
+        height: 485px;
+        bottom: 0;
+      }
+      @include bp($lg) {
         margin-left: -310px;
         width: 500px;
         height: 607px;
@@ -1816,6 +1886,10 @@ button {
       border-radius: 12px;
       white-space: normal;
       display: inline-block;
+      @include bp($md) {
+        font-size: 32px;
+        line-height: 40px;
+      }
       @include bp($sm) {
         font-size: 36px;
         line-height: 50px;
@@ -1917,6 +1991,16 @@ button {
   padding-top: 120px;
   overflow: hidden;
   position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(242,244,252,1) 0%, rgba(242,244,252,0) 100%);
+  }
   &__title {
     h2 {
       max-width: 572px;
@@ -1960,6 +2044,11 @@ button {
     margin-bottom: 64px;
     p {
       margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 24px;
+      @include bp($sm) {
+        font-size: 18px;
+      }
     }
   }
   &__btn {
@@ -1969,6 +2058,10 @@ button {
     margin: 0 auto;
     .btn {
       width: 100%;
+      &__holder {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
       &__ico {
         width: calcFluidSize(46, 62);
         height: calcFluidSize(46, 62);
@@ -2059,9 +2152,13 @@ button {
   }
 }
 .calc {
-  padding-bottom: 150px;
   position: relative;
-  padding-top: 180px;
+  padding-top: 0;
+  margin-bottom: 60px;
+  @include bp(1480px) {
+    padding-top: 180px;
+    padding-bottom: 150px;
+  }
   .skewed__top {
     background-image: url(../img/skewed2.png);
   }
@@ -2100,6 +2197,10 @@ button {
         width: calcFluidSize(46, 62);
         height: calcFluidSize(46, 62);
         line-height: calcFluidSize(46, 62);
+        margin-left: 10px;
+        @include bp($sm) {
+          margin-left: 26px;
+        }
       }
       .icon-click {
         width: calcFluidSize(22, 30);
@@ -2217,8 +2318,9 @@ button {
     }
   }
   &__title {
-    margin-bottom: 113px;
+    margin-bottom: 60px;
     @include bp($md) {
+      margin-bottom: 113px;
       text-align: left;
     }
   }
@@ -2228,7 +2330,7 @@ button {
     position: relative;
     max-width: 296px;
     color: #6d6d6d;
-    margin: 0 auto 80px;
+    margin: 0 auto 40px;
     @include bp($md) {
       margin: 0 0 80px 0;
     }
@@ -2286,13 +2388,12 @@ button {
     }
   }
   &__btn {
-    @include bp($sm) {
-      .btn {
-        width: 100%;
-      }
-      .btn__holder {
-        padding-left: 20px;
-        padding-right: 20px;
+    .btn__holder {
+      padding-left: 30px;
+      padding-right: 30px;
+      @include bp($lg) {
+        padding-left: 63px;
+        padding-right: 63px;
       }
     }
     .btn__ico {
@@ -2319,16 +2420,16 @@ button {
       margin-bottom: 20px;
     }
     &__btn {
-      min-height: 114px;
       display: flex;
       align-items: center;
       cursor: pointer;
-      padding: 20px 108px 20px 38px;
+      padding: 15px 60px 15px 20px;
       font-size: 16px;
       line-height: 22px;
       color: #333;
       position: relative;
       @include bp($sm) {
+        min-height: 114px;
         font-size: 20px;
         line-height: 28px;
         padding: 20px 108px 20px 48px;
@@ -2336,9 +2437,9 @@ button {
       &:before {
         content: '';
         position: absolute;
-        width: 20px;
-        height: 20px;
-        right: 40px;
+        width: 14px;
+        height: 14px;
+        right: 25px;
         top: 0;
         bottom: 0;
         margin: auto 0;
@@ -2346,6 +2447,11 @@ button {
         border-top: 2px solid #afafaf;
         transform: rotate(135deg);
         transition: .3s;
+        @include bp($sm) {
+          width: 20px;
+          height: 20px;
+          right: 40px;
+        }
       }
       &.collapsed:before {
         transform: rotate(45deg);
@@ -2358,7 +2464,7 @@ button {
       }
     }
     &__content {
-      padding: 0 38px 20px;
+      padding: 0 18px 20px;
       font-size: 16px;
       line-height: 24px;
       .btn {
@@ -2397,6 +2503,7 @@ button {
 .slider {
   margin-bottom: 50px;
   position: relative;
+  z-index: 2;
   &__nav {
     button {
       width: 75px;
@@ -2423,8 +2530,8 @@ button {
       }
       &.prev {
         left: 0;
-        @include bp($xl) {
-          left: -35px;
+        @include bp($sm) {
+          left: -37px;
         }
         .icon-arrow {
           transform: rotate(180deg);
@@ -2432,8 +2539,8 @@ button {
       }
       &.next {
         right: 0;
-        @include bp($xl) {
-          right: -20px;
+        @include bp($sm) {
+          right: -37px;
         }
       }
       &:active {
@@ -2469,6 +2576,14 @@ button {
   }
   &__wrap {
     position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    @include bp($sm) {
+      padding: 0 60px;
+    }
+    @include bp($md) {
+      max-width: 100%;
+    }
     @include bp($xl) {
       padding: 0 100px;
     }
@@ -2530,16 +2645,6 @@ button {
     height: 64px;
     fill: #d7d4ec;
     margin-bottom: 24px;
-  }
-  &__read-more {
-    display: inline-block;
-    vertical-align: top;
-    border-bottom: 1px dashed;
-    color: #272641;
-    margin-bottom: 40px;
-    &:hover {
-      color: #272641;
-    }
   }
   &__flag {
     display: inline-block;
@@ -2614,6 +2719,25 @@ button {
       }
     }
   }
+  .btn__holder {
+    padding-left: 30px;
+    padding-right: 30px;
+    @include bp($sm) {
+      padding-left: 63px;
+      padding-right: 63px;
+    }
+  }
+  .btn__ico {
+    width: calcFluidSize(46, 62);
+    height: calcFluidSize(46, 62);
+    line-height: calcFluidSize(46, 62);
+  }
+  .icon-click {
+    width: calcFluidSize(18, 23);
+    height: calcFluidSize(26, 31);
+    fill: #fff;
+    filter: drop-shadow( 0 1px 0 #675fd5);
+  }
 }
 .socials {
   list-style: none;
@@ -2645,10 +2769,11 @@ button {
   padding: 30px 0 125px 0;
   background: url(../img/find-us/back.png) no-repeat;
   background-position: center bottom;
+  background-size: cover;
   position: relative;
-  @include bp($xl) {
+  /*@include bp($xl) {
     background-size: cover;
-  }
+  }*/
   .title {
     position: relative;
     z-index: 2;
@@ -2725,7 +2850,7 @@ button {
       display: none;
       transition: left 1s, right 1s, top 1s, bottom 1s;
       z-index: 1;
-      @include bp($lg) {
+      @include bp($sm) {
         display: block;
       }
     }
