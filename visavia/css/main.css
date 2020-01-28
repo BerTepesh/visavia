@@ -876,16 +876,13 @@ button {
   margin-bottom: 15px;
 }
 
-.caption_white .caption__content {
-  margin-bottom: -25px;
-}
-
 .caption__bottom {
   position: absolute;
   left: 30px;
   right: 30px;
   background: #ffe68c;
   height: 30px;
+  bottom: 1px;
 }
 
 .caption__bottom:before,

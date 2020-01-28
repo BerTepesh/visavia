@@ -790,7 +790,7 @@ button {
     }
   }
   &_white &__content {
-    margin-bottom: -25px;
+    //margin-bottom: -25px;
   }
   &__bottom {
     position: absolute;
@@ -798,6 +798,7 @@ button {
     right: 30px;
     background: #ffe68c;
     height: 30px;
+    bottom: 1px;
     &:before,
     &:after {
       content: '';
