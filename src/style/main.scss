@@ -1510,24 +1510,47 @@ button {
   padding-bottom: 115px;
   cursor: pointer;
   height: 100%;
+  z-index: 2;
   &__illustr {
     position: absolute;
-    &:before,
-    &:after {
-      content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    img {
       position: absolute;
+      transition: .7s;
+      z-index: -1;
       opacity: 0;
-      transition: .3s
     }
   }
-  &:hover &__illustr {
-    &:before,
-    &:after {
-      opacity: 1;
-    }
+  &:hover &__illustr img {
+    opacity: 1;
   }
   &_asia &__illustr {
-
+    img {
+      &:first-of-type {
+        top: 20px;
+        left: 20px;
+      }
+      &:last-of-type {
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+  &_asia:hover &__illustr {
+    img {
+      &:first-of-type {
+        top: -210px;
+        left: -210px;
+      }
+      &:last-of-type {
+        top: -130px;
+        right: -110px;
+      }
+    }
   }
   &:before {
     content: '';
@@ -1604,7 +1627,7 @@ button {
   }
   &:hover &__holder {
     max-height: 999px;
-    transition: max-height .5s ease-in-out;
+    transition: max-height .8s ease-in-out;
   }
   &__text {
     padding: 0 44px;
@@ -1988,9 +2011,12 @@ button {
 }
 .visa-type {
   padding-bottom: 80px;
-  padding-top: 120px;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
+  @include bp(1480px) {
+    padding-top: 120px;
+  }
   &:before {
     content: '';
     position: absolute;

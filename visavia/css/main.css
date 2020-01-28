@@ -1504,23 +1504,47 @@ button {
   padding-bottom: 115px;
   cursor: pointer;
   height: 100%;
+  z-index: 2;
 }
 
 .visa-direction__illustr {
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-.visa-direction__illustr:before,
-.visa-direction__illustr:after {
-  content: '';
+.visa-direction__illustr img {
   position: absolute;
+  transition: .7s;
+  z-index: -1;
   opacity: 0;
-  transition: .3s;
 }
 
-.visa-direction:hover .visa-direction__illustr:before,
-.visa-direction:hover .visa-direction__illustr:after {
+.visa-direction:hover .visa-direction__illustr img {
   opacity: 1;
+}
+
+.visa-direction_asia .visa-direction__illustr img:first-of-type {
+  top: 20px;
+  left: 20px;
+}
+
+.visa-direction_asia .visa-direction__illustr img:last-of-type {
+  top: 20px;
+  right: 20px;
+}
+
+.visa-direction_asia:hover .visa-direction__illustr img:first-of-type {
+  top: -210px;
+  left: -210px;
+}
+
+.visa-direction_asia:hover .visa-direction__illustr img:last-of-type {
+  top: -130px;
+  right: -110px;
 }
 
 .visa-direction:before {
@@ -1601,7 +1625,7 @@ button {
 
 .visa-direction:hover .visa-direction__holder {
   max-height: 999px;
-  transition: max-height .5s ease-in-out;
+  transition: max-height .8s ease-in-out;
 }
 
 .visa-direction__text {
@@ -1931,7 +1955,7 @@ button {
 
 .visa-type {
   padding-bottom: 80px;
-  padding-top: 120px;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -3498,6 +3522,10 @@ button {
 
   .steps__illustr img {
     display: block;
+  }
+
+  .visa-type {
+    padding-top: 120px;
   }
 
   .visa-type__illustr img {
