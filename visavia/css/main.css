@@ -687,12 +687,17 @@ button {
   right: 0;
   top: 0;
   height: 50px;
-  background: #fff url(../img/skewed.png) no-repeat;
-  background-position: center top;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  -webkit-clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 17px, calc(100% - 120px) 40px, calc(100% - 80px) 10px, 102% -1px, 102% 50px, 0 50px);
-          clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 17px, calc(100% - 120px) 40px, calc(100% - 80px) 10px, 102% -1px, 102% 50px, 0 50px);
+  background: #fff url(../img/skewed.png) no-repeat;
+  background-position: left top;
+  -webkit-clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px);
+          clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px);
+}
+
+.skewed_calc .skewed__top {
+  background: #fff url(../img/skewed2.png) no-repeat;
+  background-position: left top;
 }
 
 .skewed__content {
@@ -702,7 +707,7 @@ button {
 
 .skewed__holder {
   background: #fff url(../img/skewed.png) no-repeat;
-  background-position: center -50px;
+  background-position: left -50px;
   border-radius: 0 0 20px 20px;
   margin-top: -2px;
   margin-bottom: 50px;
@@ -722,18 +727,22 @@ button {
   border-radius: 0 0 20px 20px;
 }
 
+.skewed_calc .skewed__holder {
+  background: #fff url(../img/skewed2.png) no-repeat;
+  background-position: left -50px;
+}
+
 .skewed__shadow {
   position: absolute;
   bottom: 0;
   left: 75px;
-  right: 75px;
   margin: 0 auto;
   height: 76px;
   max-width: 1050px;
   opacity: .2;
   box-shadow: 0 7px 50px 0 #554dd9;
   z-index: -1;
-  width: 100%;
+  width: calc(100% - 150px);
 }
 
 .caption {
@@ -1357,7 +1366,6 @@ button {
 .reasons__shadow {
   position: absolute;
   bottom: 100px;
-  width: 100%;
   left: 75px;
   right: 75px;
   margin: 0 auto;
@@ -2125,15 +2133,6 @@ button {
   position: relative;
   padding-top: 0;
   margin-bottom: 60px;
-}
-
-.calc .skewed__top {
-  background-image: url(../img/skewed2.png);
-}
-
-.calc .skewed__holder {
-  background-image: url(../img/skewed2.png);
-  background-repeat: repeat-y;
 }
 
 .calc .skewed__holder:before {
@@ -2957,11 +2956,6 @@ button {
     display: inline-block;
   }
 
-  .skewed__top {
-    -webkit-clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px);
-            clip-path: polygon(3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px);
-  }
-
   .skewed__holder {
     padding: 35px 48px 80px;
   }
@@ -3399,6 +3393,19 @@ button {
 
   .find-us__holder {
     padding: 0 0 0 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skewed__top {
+    -webkit-clip-path: none;
+            clip-path: none;
+    background: url(../img/skewed-top.png) no-repeat;
+  }
+
+  .skewed_calc .skewed__top {
+    background: url(../img/skewed-top2.png) no-repeat;
+    left: -2px;
   }
 }
 

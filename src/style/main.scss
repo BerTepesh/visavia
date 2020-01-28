@@ -600,17 +600,24 @@ button {
     right: 0;
     top: 0;
     height: 50px;
-    background: #fff url(../img/skewed.png) no-repeat;
-    background-position: center top;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
+    background: #fff url(../img/skewed.png) no-repeat;
+    background-position: left top;
     clip-path: polygon(
-        3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 17px, calc(100% - 120px) 40px, calc(100% - 80px) 10px, 102% -1px, 102% 50px, 0 50px
+        3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px
     );
-    @include bp($sm) {
-      clip-path: polygon(
-          3px 43px, 7px 37px, 12px 33px, 20px 30px, calc(100% - 165px) 10px, calc(100% - 120px) 40px, calc(100% - 80px) 5px, 102% -1px, 102% 50px, 0 50px
-      );
+    @include bp(1200px) {
+      clip-path: none;
+      background: url(../img/skewed-top.png) no-repeat;
+    }
+  }
+  &_calc &__top {
+    background: #fff url(../img/skewed2.png) no-repeat;
+    background-position: left top;
+    @include bp(1200px) {
+      background: url(../img/skewed-top2.png) no-repeat;
+      left: -2px;
     }
   }
   &__content {
@@ -619,7 +626,7 @@ button {
   }
   &__holder {
     background: #fff url(../img/skewed.png) no-repeat;
-    background-position: center -50px;
+    background-position: left -50px;
     border-radius: 0 0 20px 20px;
     margin-top: -2px;
     margin-bottom: 50px;
@@ -640,18 +647,21 @@ button {
       border-radius: 0 0 20px 20px;
     }
   }
+  &_calc &__holder {
+    background: #fff url(../img/skewed2.png) no-repeat;
+    background-position: left -50px;
+  }
   &__shadow {
     position: absolute;
     bottom: 0;
     left: 75px;
-    right: 75px;
     margin: 0 auto;
     height: 76px;
     max-width: 1050px;
     opacity: .2;
     box-shadow: 0 7px 50px 0 #554dd9;
     z-index: -1;
-    width: 100%;
+    width: calc(100% - 150px);
   }
 }
 .caption {
@@ -1365,7 +1375,6 @@ button {
   &__shadow {
     position: absolute;
     bottom: 100px;
-    width: 100%;
     left: 75px;
     right: 75px;
     margin: 0 auto;
@@ -2195,12 +2204,7 @@ button {
     padding-top: 180px;
     padding-bottom: 150px;
   }
-  .skewed__top {
-    background-image: url(../img/skewed2.png);
-  }
   .skewed__holder {
-    background-image: url(../img/skewed2.png);
-    background-repeat: repeat-y;
     &:before {
       height: 100%;
       @include bp($md) {
