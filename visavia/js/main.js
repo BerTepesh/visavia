@@ -7,13 +7,13 @@ let setProgress = function() {
     }
   })
 };
-$(document).ready(() => {
+$(document).ready(function() {
   if($(window).scrollTop() > 0) {
     $(".scrolldown").removeClass("active");
   }
   setProgress();
 });
-$(window).scroll(() => {
+$(window).scroll(function() {
   if($(window).scrollTop() > 0) {
     $(".scrolldown").removeClass("active");
   } else {
@@ -21,7 +21,7 @@ $(window).scroll(() => {
   }
   setProgress();
 });
-$(".ham-menu-trigger").click(() => {
+$(".ham-menu-trigger").click(function() {
   $(".ham-menu").toggleClass("active");
   $(".ham-menu-trigger").toggleClass("ham-menu-trigger_close")
 });
