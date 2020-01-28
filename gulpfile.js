@@ -136,7 +136,7 @@ gulp.task('sprites:build', () => {
 });
 gulp.task('image:build', ()=> {
 	return gulp.src(path.src.img)
-		.pipe(gulp.dest(path.build.img))
+    .pipe(gulp.dest(path.build.img))
 		.pipe(reload({stream: true}));
 });
 gulp.task('build', gulp.series(

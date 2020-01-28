@@ -261,7 +261,7 @@ h3 {
   &:before {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -7px;
     left: 56px;
     right: 56px;
     margin: 0 auto;
@@ -405,13 +405,14 @@ button {
       }
     }
     a {
-      display: inline-block;
+      display: none;
       vertical-align: top;
       border-bottom: 1px dashed;
       color: #272641;
       font-size: 14px;
       @include bp($sm) {
         font-size: 18px;
+        display: inline-block;
       }
     }
   }
@@ -909,16 +910,22 @@ button {
 .preface {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: -130px bottom;
   padding: 0 0 200px 0;
   position: relative;
   overflow: hidden;
+  @include bp($sm) {
+    background-position: center bottom;
+  }
   @include bp($xxl) {
     padding: 0 0 300px 0;
   }
   &__wrap {
     padding-top: 120px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    @include bp($sm) {
+      padding-bottom: 50px;
+    }
     @include bp($xl) {
       max-height: 560px;
     }
@@ -932,15 +939,15 @@ button {
       position: absolute;
       bottom: 0;
       left: 50%;
-      margin-left: 0;
+      margin-left: -60px;
       background: url(../img/preface/1.png) no-repeat;
       background-size: cover;
-      width: 400px;
-      height: 640px;
-      display: none;
+      width: 350px;
+      height: 560px;
       @include bp($sm) {
         margin-left: -20px;
-        display: block;
+        width: 400px;
+        height: 640px;
       }
       @include bp($xl) {
         width: 400px;
@@ -953,12 +960,10 @@ button {
     }
   }
   h1 {
-    text-align: center;
     font-size: 28px;
     line-height: 34px;
     margin-bottom: 20px;
     @include bp($sm) {
-      text-align: left;
       font-size: 40px;
       line-height: 48px;
       margin-bottom: 25px;
@@ -970,7 +975,7 @@ button {
     }
     span {
       display: block;
-      font: 24px/30px 'Montserrat', sans-serif;
+      font: 20px/26px 'Montserrat', sans-serif;
       padding-top: 5px;
       @include bp($sm) {
         font-size: 28px;
@@ -992,13 +997,9 @@ button {
     align-items: center;
     z-index: 1;
     position: relative;
-    justify-content: center;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
-    @include bp($sm) {
-      justify-content: start;
-    }
     @include bp($xl) {
       margin-bottom: 10px;
     }
@@ -1028,11 +1029,8 @@ button {
     }
   }
   &__consult {
-    text-align: center;
-    @include bp($sm) {
-      display: inline-block;
-      vertical-align: top;
-    }
+    display: inline-block;
+    vertical-align: top;
     @include bp($xl) {
       text-align: center;
       display: block;
@@ -1042,14 +1040,21 @@ button {
       font-size: 16px;
       line-height: 19px;
       margin-bottom: 10px;
-      text-align: center;
+
+      @include bp($sm) {
+        text-align: center;
+      }
       @include bp($xxl) {
         margin-bottom: 25px;
       }
       span {
-        max-width: 250px;
+        max-width: 180px;
         display: inline-block;
         vertical-align: top;
+        text-align: center;
+        @include bp($sm) {
+          max-width: 250px;
+        }
       }
     }
   }
@@ -2617,16 +2622,9 @@ button {
   }
   &__wrap {
     position: relative;
-    max-width: 500px;
     margin: 0 auto;
     @include bp($sm) {
-      padding: 0 60px;
-    }
-    @include bp($md) {
-      max-width: 100%;
-    }
-    @include bp($xl) {
-      padding: 0 100px;
+      width: calc(100% - 60px);
     }
   }
   &__shadow {
@@ -2637,7 +2635,6 @@ button {
     margin: 0 auto;
     height: 76px;
     max-width: 1050px;
-    width: 100%;
     opacity: .2;
     box-shadow: 0 7px 50px 0 #554dd9;
     z-index: -1;

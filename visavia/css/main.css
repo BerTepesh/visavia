@@ -309,7 +309,7 @@ h3 {
 .btn:before {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -7px;
   left: 56px;
   right: 56px;
   margin: 0 auto;
@@ -469,7 +469,7 @@ button {
 }
 
 .header__phone a {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   border-bottom: 1px dashed;
   color: #272641;
@@ -1000,7 +1000,7 @@ button {
 .preface {
   background: url(../img/preface/back.jpg) no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: -130px bottom;
   padding: 0 0 200px 0;
   position: relative;
   overflow: hidden;
@@ -1008,7 +1008,7 @@ button {
 
 .preface__wrap {
   padding-top: 120px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .preface__wrap:before {
@@ -1016,16 +1016,14 @@ button {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: 0;
+  margin-left: -60px;
   background: url(../img/preface/1.png) no-repeat;
   background-size: cover;
-  width: 400px;
-  height: 640px;
-  display: none;
+  width: 350px;
+  height: 560px;
 }
 
 .preface h1 {
-  text-align: center;
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 20px;
@@ -1033,7 +1031,7 @@ button {
 
 .preface h1 span {
   display: block;
-  font: 24px/30px 'Montserrat', sans-serif;
+  font: 20px/26px 'Montserrat', sans-serif;
   padding-top: 5px;
 }
 
@@ -1049,8 +1047,6 @@ button {
       align-items: center;
   z-index: 1;
   position: relative;
-  -ms-flex-pack: center;
-      justify-content: center;
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 30px;
@@ -1069,7 +1065,8 @@ button {
 }
 
 .preface__consult {
-  text-align: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .preface__consult p {
@@ -1077,13 +1074,13 @@ button {
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .preface__consult p span {
-  max-width: 250px;
+  max-width: 180px;
   display: inline-block;
   vertical-align: top;
+  text-align: center;
 }
 
 .preface .btn__holder {
@@ -2543,7 +2540,6 @@ button {
 
 .reviews__wrap {
   position: relative;
-  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -2555,7 +2551,6 @@ button {
   margin: 0 auto;
   height: 76px;
   max-width: 1050px;
-  width: 100%;
   opacity: .2;
   box-shadow: 0 7px 50px 0 #554dd9;
   z-index: -1;
@@ -2959,6 +2954,7 @@ button {
 
   .header__phone a {
     font-size: 18px;
+    display: inline-block;
   }
 
   .skewed__top {
@@ -2978,13 +2974,21 @@ button {
     top: 40px;
   }
 
+  .preface {
+    background-position: center bottom;
+  }
+
+  .preface__wrap {
+    padding-bottom: 50px;
+  }
+
   .preface__wrap:before {
     margin-left: -20px;
-    display: block;
+    width: 400px;
+    height: 640px;
   }
 
   .preface h1 {
-    text-align: left;
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 25px;
@@ -2995,14 +2999,12 @@ button {
     line-height: 34px;
   }
 
-  .preface__subtitle {
-    -ms-flex-pack: start;
-        justify-content: start;
+  .preface__consult p {
+    text-align: center;
   }
 
-  .preface__consult {
-    display: inline-block;
-    vertical-align: top;
+  .preface__consult p span {
+    max-width: 250px;
   }
 
   .reasons__img {
@@ -3091,7 +3093,7 @@ button {
   }
 
   .reviews__wrap {
-    padding: 0 60px;
+    width: calc(100% - 60px);
   }
 
   .reviews .btn__holder {
@@ -3268,10 +3270,6 @@ button {
     bottom: 40px;
   }
 
-  .reviews__wrap {
-    max-width: 100%;
-  }
-
   .reviews__holder {
     padding: 32px 32px 32px 84px;
   }
@@ -3434,10 +3432,6 @@ button {
 
   .visa-type h3 {
     padding-left: 30px;
-  }
-
-  .reviews__wrap {
-    padding: 0 100px;
   }
 
   .reviews__holder {
