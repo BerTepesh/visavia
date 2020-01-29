@@ -7,11 +7,23 @@ let setProgress = function() {
     }
   })
 };
+
+let getPickAmount = function() {
+  let pickAmount = 0;
+  $(".pick").find(".amount__number").each(function(){
+    pickAmount += parseInt($(this).val());
+  });
+  if(pickAmount > 0)
+    return ': ' + pickAmount;
+  else
+    return '';
+};
 $(document).ready(function() {
   if($(window).scrollTop() > 0) {
     $(".scrolldown").removeClass("active");
   }
   setProgress();
+  $(".pick__num").html(getPickAmount());
 });
 $(window).scroll(function() {
   if($(window).scrollTop() > 0) {
@@ -32,6 +44,7 @@ $(".amount__btn").click(function(){
   } else if($(this).hasClass("amount__btn_plus")) {
     num.val(parseInt(num.val()) + 1);
   }
+  $(".pick__num").html(getPickAmount());
 });
 $(window).on('load resize', function() {
   $(".slider__holder").slick({
