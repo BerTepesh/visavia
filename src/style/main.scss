@@ -1536,38 +1536,31 @@ button {
     top: 0;
     bottom: 0;
     z-index: -1;
+    pointer-events: none;
     img {
       position: absolute;
       transition: .7s;
       z-index: -1;
       opacity: 0;
+      &:first-of-type {
+        top: 0;
+        left: 0;
+      }
+      &:nth-of-type(2) {
+        top: 0;
+        right: 0;
+      }
     }
   }
   &:hover &__illustr img {
     opacity: 1;
-  }
-  &_asia &__illustr {
-    img {
-      &:first-of-type {
-        top: 20px;
-        left: 20px;
-      }
-      &:last-of-type {
-        top: 20px;
-        right: 20px;
-      }
+    &:first-of-type {
+      top: -262px;
+      left: -200px;
     }
-  }
-  &_asia:hover &__illustr {
-    img {
-      &:first-of-type {
-        top: -210px;
-        left: -210px;
-      }
-      &:last-of-type {
-        top: -130px;
-        right: -110px;
-      }
+    &:nth-of-type(2) {
+      top: -262px;
+      right: -200px;
     }
   }
   &:before {
@@ -1734,33 +1727,6 @@ button {
   &__ico {
     text-align: center;
     margin-bottom: 20px;
-    svg {
-      fill: rgba(78, 71, 170, .6);
-    }
-    .icon-dif-1 {
-      width: 90px;
-      height: 90px;
-    }
-    .icon-dif-2 {
-      width: 84px;
-      height: 90px;
-    }
-    .icon-dif-3 {
-      width: 90px;
-      height: 101px;
-    }
-    .icon-dif-4 {
-      width: 90px;
-      height: 76px;
-    }
-    .icon-dif-5 {
-      width: 90px;
-      height: 103px;
-    }
-    .icon-dif-6 {
-      width: 90px;
-      height: 86px;
-    }
   }
   &__content {
     position: relative;
